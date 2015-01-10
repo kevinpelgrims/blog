@@ -10,3 +10,6 @@ github_username:  kevinpelgrims
 
 # Build settings
 markdown: kramdown
+
+# Outputting
+permalink: /:year/:month/:day/:title
