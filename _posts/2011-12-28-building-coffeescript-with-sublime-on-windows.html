@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Building CoffeeScript with Sublime on Windows"
+date: 2011-12-28 15:15:28
+categories: tools web
+---
+<p>
+As I’m looking at <a href="http://coffeescript.org/">CoffeeScript</a> in my spare time, I wanted a fast way to build the scripts. Since I work with <a href="http://www.sublimetext.com/">Sublime Text 2</a> for all my scripting, it seemed like the right tool for the job.
+</p>
+<p>
+Sublime is a text editor that has a lot in common with <a href="http://macromates.com/">TextMate</a> for OS X, but it has the huge advantage of working cross-platform. Sublime can also be extended using plug-ins, like TextMate, and a lot of TextMate bundles are compatible with it.
+</p>
+
+<h2>Node.js</h2>
+<p>
+Now, there are several ways to compile CoffeeScript locally (e.g. <a href="http://stackoverflow.com/questions/2879401/how-can-i-compile-coffeescript-from-net">from .NET</a> or using <a href="http://jashkenas.github.com/coffee-script/#usage">the built-in watch option</a>). We are going to use <a href="http://nodejs.org/">Node.js</a> and <a href="http://npmjs.org/">npm</a> (the Node Package Manager).
+<br />
+Node.js works on Windows these days and the .msi installer also makes sure npm is on your system. You will need to add the folder that contains (default is <span style="font-family:'Courier New';">C:\Program Files (x86)\nodejs</span>) node.exe and npm.cmd to your environment variables to make sure you can easily run them from anywhere. Here’s a nice guide to <a href="http://www.itechtalk.com/thread3595.html">adding, removing and editing environment variables in Windows 7</a>. The normal thing to do here, is to add it to the “path” variable, if it’s not there already, feel free to create it.
+</p>
+
+<h2>CoffeeScript compiler</h2>
+<p>
+Installing the CoffeeScript compiler and Node.js tools is pretty straight forward when we open up a command window and use npm:
+</p>
+
+<pre class="prettyprint">
+npm install coffee-script
+</pre>
+
+<p>
+<span style="font-size:smaller;"><strong>Warning</strong>: be sure to open the command window on the same folder as your Node.js installation, that means where node.exe lives (default is <span style="font-family:'Courier New';">C:\Program Files (x86)\nodejs</span>). You will need to open the command windows as administrator to do this. Because npm will not use an absolute path to create new folders, but will use <span style="font-family:Courier;">./node_modules</span>. So it will create a new folder in a location you don't want it to be if you don't pay attention.</span>
+</p>
+<p>
+This installs CoffeeScript stuff for Node.js and on Windows it has a .cmd to run coffee-related stuff through Node.js automatically. The default folder for these .cmd files is <span style="font-family:Courier;">C:\Program Files (x86)\nodejs\node_modules\.bin</span> and you should add this to your environment variables too (preferably the existing “path” variable). After doing all that, you should be able to run “<span style="font-family:Courier;">coffee</span>” in your command window.
+</p>
+
+<h2>CoffeeScript in Sublime</h2>
+<p>
+To get CoffeeScript support in Sublime, we’re going to download the CoffeeScript package. First off, it’ll be useful to install Sublime Package Control, to make it easier to install packages. Detailed instructions can be found here: <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a>
+</p>
+<p>
+Now, when we restart Sublime, we can access package control through the Command Palette using <span style="font-family:Courier;">Ctrl+Shift+P</span>. As you start typing commands, you get an overview of the available options. If you execute “<span style="font-family:'Courier New';">discover packages</span>” a browser pops up giving you a nice overview of all available packages and a search bar. To install a package, we need the command “<span style="font-family:Courier;">install package</span>”. After pressing enter we get a list of all available packages. We will install “<span style="font-family:Courier;">CoffeeScript</span>”.
+</p>
+
+<h2>Building it</h2>
+<p>
+After doing all that we already have some support for the language, i.e. syntax highlighting. But building the scripts will not yet work on Windows. To fix this, click <span style="font-family:Courier;">Preferences –&gt; Browse Packages...</span> in Sublime. This will open an explorer window where you can see all the packages. Navigate to <span style="font-family:Courier;">CoffeeScript\Commands</span> and open the file <span style="font-family:Courier;">CoffeeScript.sublime-build</span>. Remove the line that has the path variable and change the cmd line to have <span style="font-family:Courier;">coffee.cmd</span> instead of <span style="font-family:Courier;">coffee</span>.
+</p>
+
+Original version:
+
+<pre class="prettyprint">
+{
+&quot;path&quot;: &quot;$HOME/bin:/usr/local/bin:$PATH&quot;,
+&quot;cmd&quot;: [&quot;coffee&quot;,&quot;-c&quot;,&quot;$file&quot;],
+&quot;file_regex&quot;: &quot;^(...*?):([0-9]*):?([0-9]*)&quot;,
+&quot;selector&quot;: &quot;source.coffee&quot;
+}
+</pre>
+
+Edited version:
+
+<pre class="prettyprint">
+{
+&quot;cmd&quot;: [&quot;coffee.cmd&quot;,&quot;-c&quot;,&quot;$file&quot;],
+&quot;file_regex&quot;: &quot;^(...*?):([0-9]*):?([0-9]*)&quot;,
+&quot;selector&quot;: &quot;source.coffee&quot;
+}
+</pre>
+
+<p>
+Now create a file, save it as <span style="font-family:Courier;">test.coffee</span>, add some CoffeeScript, press <span style="font-family:Courier;">Ctrl+B</span> and Sublime creates a file called <span style="font-family:Courier;">test.js</span> in the same folder.
+</p>
+
+CoffeeScript file:
+
+<pre class="prettyprint">
+console.log &quot;Hello world!&quot;
+</pre>
+
+JavaScript file:
+
+<pre class="prettyprint">
+(function() {
+
+console.log(&quot;Hello world!&quot;);
+
+}).call(this);
+</pre>
+
+<p>
+You can adjust the build settings to your own needs, e.g. change the output directory or include <a href="http://www.jslint.com/">JSLint</a>. But for getting to know CoffeeScript and playing with it locally, this will work. And it makes it a lot easier! We can also for example integrate building LESS files to CSS in the same way. That would provide a uniform way of building different scripts and styles in a project and prevents us from having to use the command line to do everything manually, which would slow us down.
+</p>

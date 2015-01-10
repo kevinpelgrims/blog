@@ -1,0 +1,26 @@
+---
+layout: post
+title: "MapGuide OS - Failed while processing WebVirtualDirs"
+date: 2011-08-11 14:01:12
+categories: gis
+---
+<p>
+<img style="float:left;margin-right:5px;" title="Error!" src="http://kevinpelgrims.com/blog/get/images/2011/08/error.png" alt="" width="120" height="120" />
+When you are installing MapGuide OS and you encounter following error:
+</p>
+<p>
+<strong>Failed while processing WebVirtualDirs</strong>
+</p>
+<p>
+Fear not, because here is the solution!
+</p>
+
+<p>
+The problem is with how MapGuide OS is trying to install its websites. This is not configurable during the installation and will by default be installed in a website called "Default Web Site" on port 80. This is the website that is created for you when IIS is installed. If you change the name of the website or the port number, the MapGuide OS installation freaks out!
+</p>
+<p>
+So the simplest solution is to <strong>create a website</strong> called <strong>"Default Web Site"</strong> and have it run at <strong>port 80</strong>. You can then <strong>edit</strong> those settings <strong>after the installation</strong> is done without any problems, so you can still run the MapGuide OS websites on a different port.
+</p>
+<p>
+If you need some more explanation, this is an interesting thread <a href="http://osgeo-org.1803224.n2.nabble.com/Installation-error-td3858392.html">http://osgeo-org.1803224.n2.nabble.com/Installation-error-td3858392.html</a> with a good answer by <a title="Jason Birch's blog" href="http://www.jasonbirch.com/nodes/">Jason Birch</a>.
+</p>

@@ -1,0 +1,74 @@
+---
+layout: post
+title: "Add help to your own PowerShell scripts"
+date: 2010-05-10 08:21:56
+categories: powershell
+---
+<p>
+A while ago I created a script to manage services on a remote server (see <a href="http://kevinpelgrims.com/blog/2010/02/24/powershell-remote-service-manager/">Remote Service Manager</a>). Included in that script was a way to display some information with the use of a switch (<em>-help</em>). A few days later I was wondering if there wasn't a better way to include help in own PowerShell scripts. And of course there is! It's even in the help files.
+</p>
+<p>
+So, here's what to do. First, check the information in PowerShell help by running following command:
+</p>
+<pre class="prettyprint">
+Get-Help about_Comment_Based_Help
+</pre>
+
+<p>
+There we can see this help thing will be pretty straightforward to implement. Here's what it says:
+</p>
+<pre class="prettyprint">
+The syntax for comment-based Help is as follows:
+
+    # .help keyword
+    # help content
+
+-or -
+
+    <#
+        .help keyword
+        help content
+    #>
+</pre>
+
+<p>
+So, this means we just have to make a comment block, with some specific keywords. Cool. So, what are the right keywords?  They're also in the help. Here's a small list of the most important stuff:
+</p>
+<ul>
+	<li>.SYNOPSIS</li>
+	<li>.DESCRIPTION</li>
+	<li>.PARAMETER &lt;Parameter-Name&gt;</li>
+	<li>.EXAMPLE</li>
+	<li>.NOTES</li>
+	<li>.LINK</li>
+</ul>
+For more details and a complete list of keywords, I suggest you look at the help in PowerShell. Here is a little example of how we're going to put this to work:
+
+<pre class="prettyprint">
+<#
+
+.SYNOPSIS
+This is a simple Powershell script to explain how to create help
+
+.DESCRIPTION
+The script itself will only print 'Hello World'. But that's cool. It's main objective is to show off the cool help thingy anyway.
+
+.EXAMPLE
+./HelloWorld.ps1
+
+.NOTES
+Put some notes here.
+
+.LINK
+http://kevinpelgrims.wordpress.com
+
+#>
+
+Write-Host ‘Hello World!’
+</pre>
+
+<p>
+There, that's all there is to it. I wish I looked at that before I made the RSM script :) It adds some kind of professionalism to a script, don't you think? And also, it's intuitive for users to use the Get-Help command. Everyone is happy! Below is a screenshot of our own help.
+</p>
+
+<a href="http://kevinpelgrims.com/blog/get/images/2010/05/get-help.png"><img title="PowerShell_get-help" src="http://kevinpelgrims.com/blog/get/images/2010/05/get-help.png" alt="" width="510" height="288" /></a>

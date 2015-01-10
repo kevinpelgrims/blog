@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Parallel programming in .NET - Introduction"
+date: 2010-08-30 17:27:18
+categories: parallel
+---
+<h2>What is parallel programming?</h2>
+<p>
+Sequential programming assumes a set of instructions that are executed sequentially by a single processor. The point of parallel programming is to program systems that consist of multiple processors and therefore have multiple simultaneous instruction streams.
+</p>
+
+<h2>Why do we need it?</h2>
+<p>
+The clock speeds of chips are no longer increasing. All future improvements in computer speed will come from parallelism. In other words, more and more processors are being added to new computers. These chips enable software to do <strong>multiple tasks at the same time</strong>. Each processor it’s own task. So one way to make applications run faster, is to use parallel programming.
+This is <strong>not the same as multithreading</strong>, though. Multithreading can be done on a single core CPU. In that case, two threads can never execute at the same time on the CPU. The operating system (which takes care of multi-threading) divides the time of the processor between all open threads. When you have too many executing threads at once, your system slows down as there is not enough time for all the threads to run at full speed.
+</p>
+
+<h2>Concurrent vs Parallel</h2>
+<p>
+To be clear, parallel programming is not the same as concurrent programming. As they say, a picture says more than a thousand words:
+
+<div class="imagecaption">
+ <a href="http://kevinpelgrims.com/blog/get/images/2010/08/concurrentvsparallel.png"><img title="Concurrent vs Parallel" src="http://kevinpelgrims.com/blog/get/images/2010/08/concurrentvsparallel.png" alt="" width="497" height="441" /></a>
+ <br /><span class="caption">Comparison between concurrent and parallel</span>
+</div>
+
+Well, maybe it could use some explanation.
+<strong>Concurrent applications</strong> tend to create a thread that handles a whole series of tasks. Most of the time these concurrent applications create threads because they need an isolated process for a concurrent event.
+<strong>Parallel applications</strong> divide a process into small tasks that are executed on seperate threads. Because the tasks are small, the threads can be divided evenly over the processors, resulting in very efficient use of a multi-core CPU.
+</p>
+
+<h2>Parallel programming in .NET 4.0</h2>
+<p>
+In the .NET 4.0 framework parallel is included in the form of <strong>Task Parallel Library</strong> (TPL) and <strong>Parallel LINQ</strong> (PLINQ). These functions are actually built on top of the existing thread pool in previous versions of the .NET framework. Parallel is pretty easy to implement, but also very easy to misuse or overuse. Caution is required!
+
+<div class="imagecaption">
+ <a href="http://kevinpelgrims.com/blog/get/images/2010/08/paralleloverview-msdn.png"><img title="Parallel Overview (MSDN)" src="http://kevinpelgrims.com/blog/get/images/2010/08/paralleloverview-msdn.png" alt="" width="510" height="273" /></a>
+ <br /><span class="caption">Overview of parallelism in .NET (MSDN)</span>
+</div>
+
+The following resources will give an introduction to <strong>parallel programming in C# 4.0</strong> and provide some <strong>guidelines and best practices</strong>.
+</p>
+
+<h2>Resources</h2>
+<ul>
+	<li><a href="http://msdn.microsoft.com/en-us/library/dd460693%28v=VS.100%29.aspx">http://msdn.microsoft.com/en-us/library/dd460693(v=VS.100).aspx</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Parallel_Extensions">http://en.wikipedia.org/wiki/Parallel_Extensions</a></li>
+</ul>
