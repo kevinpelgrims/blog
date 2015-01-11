@@ -25,7 +25,7 @@ To start using scripts in Google Docs, just create a new spreadsheet, Tools > Sc
 
 Based on the snippets above, we can now make a function to fetch data from Trello in a generic way. This is how I did that:
 
-<pre class="prettyprint">
+{% highlight javascript %}
 function trelloFetch(url) {
   var key = "insertyourkeyhere";
   
@@ -36,7 +36,7 @@ function trelloFetch(url) {
   
   return object;
 }
-</pre>
+{% endhighlight %}
 
 This way it's easy to get anything needed from Trello, using the one function. If something needs to change, there's only one place. DRY FTW!
 
@@ -50,27 +50,27 @@ To make sure the script runs at a certain interval, it's possible to set a timer
 
 So the whole point is to run this with a timer, every 8 hours. To make sure every increment appears on a new row in the spreadsheet, you will need some kind of counter. This counter needs to be incremented every time the script gets executed. To make sure that happens, you can just put an integer in the spreadsheet and then the script gets the value when it runs. When the script is done, it increments the integer.
 
-<pre class="prettyprint">
-  var counter = sheet.getRange(1, 9);
-  var baserow = counter.getValue() + 4;
-  
-  ...
-  
-  counter.setValue(counter.getValue()+1);
-</pre>
+{% highlight javascript %}
+var counter = sheet.getRange(1, 9);
+var baserow = counter.getValue() + 4;
+
+...
+
+counter.setValue(counter.getValue()+1);
+{% endhighlight %}
 
 So you have to add a counter to the field on 1,9 (or row 1, column I) in the spreadsheet. The baserow var is the integer that's used to determine on which row the data should be saved. The first time the script runs, there's an extra row because the titles need to be added. You can just check if the script has run before using the value of the counter.
 
-<pre class="prettyprint">
-  if (counter.getValue() == 0) {
-    data = getC52I18NMVC4BoardListCount(true);
-    sheet.getRange(baserow - 1, basecolumn, 2, 4).setValues(data);
-  }
-  else {
-    data = getC52I18NMVC4BoardListCount(false);
-    sheet.getRange(baserow, basecolumn, 1, 4).setValues(data);
-  }
-</pre>
+{% highlight javascript %}
+if (counter.getValue() == 0) {
+  data = getC52I18NMVC4BoardListCount(true);
+  sheet.getRange(baserow - 1, basecolumn, 2, 4).setValues(data);
+}
+else {
+  data = getC52I18NMVC4BoardListCount(false);
+  sheet.getRange(baserow, basecolumn, 1, 4).setValues(data);
+}
+{% endhighlight %}
 
 The first run of the script gets the titles and the values, after that only the values are needed. In this script there is a specified number of columns, this could also be dynamic, that would make the script a bit more dynamic. I should do that later. For now I just want the thing to run.
 
@@ -98,7 +98,7 @@ These charts are based on the data in the table below (all times are in the Cent
 
 So here's the entire script to fetch data from a Trello of choice, it's actually pretty simple. To use it, a counter is also needed. To make it even cooler it's possible to set it all up so that an email is sent when errors occur. Google Docs can be a nice tool to keep track of progress on a project and this script can be easily extended with some extra functionality. This is just an exploration of the possibilities and apparently Google Docs is really powerful!
 
-<pre class="prettyprint">
+{% highlight javascript %}
 function trelloFetch(url) {
   var key = "insertkeyhere";
   
@@ -163,4 +163,4 @@ function getC52I18NMVC4Values() {
   
   counter.setValue(counter.getValue()+1);
 }
-</pre>
+{% endhighlight %}

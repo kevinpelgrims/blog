@@ -47,14 +47,14 @@ It took some Googling and puzzling to get the posts in FunnelWeb. The format of 
 This was definitely the hardest part! I spent a LOT of time figuring out what was going wrong here. I used the export from WordPress to get the comments in Disqus, with the nice import functionality on the Disqus website. I could see the comments in Disqus, but they never showed up on my blog. I could add comments on my blog, they would show up in Disqus and then they would be there on my blog too. But what about the old comments? Something weird was going on there. I thought the problem was with FunnelWeb and spent some time digging in the code and abusing developer tools in every browser to figure things out. But I couldn't find a thing. When I was close to giving up [Koen Metsu](http://koenmetsu.com/) came up with the (strange) solution. Apparently all I needed to do was remove the trailing slashes in links to posts from the comments in the XML file from WordPress.
 
 For example, this:
-<pre class="prettyprint">
-&lt;wp:comment_author_url&gt; http://kevinpelgrims.wordpress.com/2010/04/27/powershell-2-0-background-jobs/ &lt;/wp:comment_author_url&gt;
-</pre>
+{% highlight xml %}
+<wp:comment_author_url>http://kevinpelgrims.wordpress.com/2010/04/27/powershell-2-0-background-jobs/</wp:comment_author_url>
+{% endhighlight %}
 
 Becomes:
-<pre class="prettyprint">
-&lt;wp:comment_author_url&gt; http://kevinpelgrims.wordpress.com/2010/04/27/powershell-2-0-background-jobs &lt;/wp:comment_author_url&gt;
-</pre>
+{% highlight xml %}
+<wp:comment_author_url>http://kevinpelgrims.wordpress.com/2010/04/27/powershell-2-0-background-jobs</wp:comment_author_url>
+{% endhighlight %}
 
 Yes, the only difference is the frikkin slash... Then when I imported to Disqus everything just magically worked! That was a nice moment, because I was getting seriously annoyed and almost considered just dropping all the old comments. Thanks Koen for figuring that out!
 
