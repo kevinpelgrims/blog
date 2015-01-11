@@ -101,28 +101,28 @@ You then also need to update `renderTabView` to take in a number to display in t
 
 {% highlight java %}
 public static View renderTabView(Context context, int titleResource, int backgroundResource, int badgeNumber) {
-        FrameLayout view = (FrameLayout) LayoutInflater.from(context).inflate(R.layout.tab_badge, null);
-        // We need to manually set the LayoutParams here because we don't have a view root
-        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        ((TextView) view.findViewById(R.id.tab_text)).setText(titleResource);
-        view.findViewById(R.id.tab_text).setBackgroundResource(backgroundResource);
-        updateTabBadge((TextView) view.findViewById(R.id.tab_badge), badgeNumber);
-        return view;
-    }
+    FrameLayout view = (FrameLayout) LayoutInflater.from(context).inflate(R.layout.tab_badge, null);
+    // We need to manually set the LayoutParams here because we don't have a view root
+    view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    ((TextView) view.findViewById(R.id.tab_text)).setText(titleResource);
+    view.findViewById(R.id.tab_text).setBackgroundResource(backgroundResource);
+    updateTabBadge((TextView) view.findViewById(R.id.tab_badge), badgeNumber);
+    return view;
+}
 
-    public static void updateTabBadge(ActionBar.Tab tab, int badgeNumber) {
-        updateTabBadge((TextView) tab.getCustomView().findViewById(R.id.tab_badge), badgeNumber);
-    }
+public static void updateTabBadge(ActionBar.Tab tab, int badgeNumber) {
+    updateTabBadge((TextView) tab.getCustomView().findViewById(R.id.tab_badge), badgeNumber);
+}
 
-    private static void updateTabBadge(TextView view, int badgeNumber) {
-        if (badgeNumber > 0) {
-            view.setVisibility(View.VISIBLE);
-            view.setText(Integer.toString(badgeNumber));
-        }
-        else {
-            view.setVisibility(View.GONE);
-        }
+private static void updateTabBadge(TextView view, int badgeNumber) {
+    if (badgeNumber > 0) {
+        view.setVisibility(View.VISIBLE);
+        view.setText(Integer.toString(badgeNumber));
     }
+    else {
+        view.setVisibility(View.GONE);
+    }
+}
 {% endhighlight %}
 
 And that's it. You now have a way to easily set a different background to every tab and add and update a badge on the tab view.
