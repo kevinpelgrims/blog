@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<img src="http://www.gravatar.com/avatar/872f26792da7176d69d5add3cf0b7e25.png" style="float: left; margin: 5px 10px 5px 0px;" alt="picture"/>
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+After working with .NET on web and Windows projects for 4 years in Belgium, I'm now living in Copenhagen (Denmark) and working as a mobile developer.
+Previously I did Android development at [Endomondo](http://www.endomondo.com), but now I'm working on different mobile platforms at [Drivr](http://www.drivr.com).
+I have also worked on the official [DuckDuckGo](https://duckduckgo.com/) apps for [Android](https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android) and [Windows 8](http://apps.microsoft.com/windows/app/duckduckgo/d526ba1b-a065-4cb9-a6c6-bf30f6123e2b).
