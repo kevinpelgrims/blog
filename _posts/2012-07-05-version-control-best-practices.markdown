@@ -2,7 +2,8 @@
 layout: post
 title: "Version control best practices"
 date: 2012-07-05 07:51:19
-categories: general
+tags: general
+comments: true
 ---
 I'm one of the poor guys who had to deal with Visual SourceSafe, I used to work with TFS on a daily basis, I'm using Git every day at work with a few other people, I've been using Hg for some pet projects with a friend and everybody has used Subversion.
 

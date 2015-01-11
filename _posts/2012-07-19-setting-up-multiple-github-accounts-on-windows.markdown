@@ -2,7 +2,8 @@
 layout: post
 title: "Setting up multiple GitHub accounts on Windows"
 date: 2012-07-20 06:51:00
-categories: version-control git
+tags: [version control, git]
+comments: true
 ---
 <img style="float: right;" alt="github windows" src="http://kevinpelgrims.com/blog/files/images/2012/07/github_windows.png" />
 

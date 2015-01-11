@@ -2,7 +2,8 @@
 layout: post
 title: "Adding a badge to an ActionBar tab"
 date: 2014-06-24 20:12:02
-categories: android ui
+tags: android ui
+comments: true
 ---
 An app I worked on a while ago has a notifications screen where the notifications are divided into tabs. So in order to make it very clear how many notifications are on each tab, we decided to have a "badge" on every tab. Here's an example of what I mean:
 

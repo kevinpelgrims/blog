@@ -2,7 +2,8 @@
 layout: post
 title: ".NET project workflow with Hg, BitBucket and AppHarbor"
 date: 2012-05-28 07:48:00
-categories: .net tools web
+tags: .net tools web
+comments: true
 ---
 The past few weeks I've been working on a project with a friend who lives in Belgium. You can read more about that in a previous post, [Introducing NuGetFight](http://kevinpelgrims.com/blog/2012/05/21/introducing-nugetfight). Since we're living 1000km apart, we need the right tools to deal with all this. The project is a ASP.NET MVC3 website in C#, we're using Visual Studio to develop it. But as we're not able to sit in the same room and code, we need some extra tools to enhance the workflow.
 

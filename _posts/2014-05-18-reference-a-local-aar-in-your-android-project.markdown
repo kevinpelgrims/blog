@@ -2,7 +2,8 @@
 layout: post
 title: "Reference a local .aar in your Android project"
 date: 2014-05-18 21:05:01
-categories: android gradle
+tags: android gradle
+comments: true
 ---
 If you create an Android library project and you don't want to upload it to Maven central or run a local repository, it's a little tricky to add your .aar to an Android project.
 
