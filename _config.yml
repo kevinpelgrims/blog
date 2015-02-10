@@ -2,7 +2,7 @@
 title: Kevin Pelgrims
 email: kevin.pelgrims@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Random experiments with Android, Git, Gradle, the web, .NET and PowerShell.
+  Experiments with Android, Git, Gradle, the web, .NET and PowerShell.
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
 url: "http://kevinpelgrims.com" # the base hostname & protocol for your site
 twitter_username: kevinpelgrims
