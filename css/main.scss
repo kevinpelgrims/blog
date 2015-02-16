@@ -27,6 +27,10 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+// Custom variables
+$share-color:      #bbc7cc;
+$share-color-dark: #50585d;
+
 
 
 // Using media queries with like this:
@@ -48,5 +52,6 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "custom",
         "syntax-highlighting"
 ;

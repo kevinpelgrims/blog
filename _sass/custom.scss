@@ -1,0 +1,12 @@
+.share-group a, .fa-twitter, .fa-facebook-square, .fa-google-plus-square {
+	display: inline-block;
+	margin-right: 10px;
+	color: $share-color;
+	transition: color 0.2s ease 0s;
+	text-decoration: none;
+	
+	&:hover {
+		color: $share-color-dark;
+		text-decoration: none;
+	}
+}
