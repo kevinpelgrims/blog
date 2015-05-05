@@ -11,7 +11,7 @@ comments: true
 <p>
 A while back I created this PowerShell script to remotely manage services (see <a title="PowerShell – Remote Service Manager" href="http://kevinpelgrims.com/blog/2010/02/24/powershell-remote-service-manager/">Remote Service Manager</a>), a bit later I made the available help a bit more professional (see <a title="Add help to your own PowerShell scripts" href="http://kevinpelgrims.com/blog/2010/05/10/add-help-to-your-own-powershell-scripts/">Add help to your own PowerShell scripts</a>). Now I was thinking it would be cool to create an interface in .NET for this script. So I started developing a WinForm application around the script. Initially, it looked like this:
 <br />
-<a href="http://kevinpelgrims.com/blog/get/images/2011/08/remoteservicemanager.png"><img title="remoteservicemanager" src="http://kevinpelgrims.com/blog/get/images/2011/08/remoteservicemanager.png" alt="" width="510" height="345" /></a>
+<a href="http://kevinpelgrims.com/blog/files/images/2011/08/remoteservicemanager.png"><img title="remoteservicemanager" src="http://kevinpelgrims.com/blog/files/images/2011/08/remoteservicemanager.png" alt="" width="510" height="345" /></a>
 </p>
 <p>
 This was the first (working) prototype of the RSM-GUI. But then I started thinking it would be much cooler to create an application that can run all scripts, even those with parameters. I started thinking about how to do this and actually it didn't seem so hard. I started by creating a form that can execute simple PowerShell commands and show the output, then added support for running scripts stored on the hard drive. For the parameters I just made sure they are all displayed in a grid, where you can give them a value by simply typing something in. And that was it! I now have a Windows application that can run scripts on a more visual way. Now you can simply load the script with an OpenFileDialog and see what parameters are available. If you still don't fully understand how the script works, you can press the Get-Help button to display the help information in the outputbox.
@@ -20,12 +20,12 @@ This was the first (working) prototype of the RSM-GUI. But then I started thinki
 And now, it looks like this:
 </p>
 <div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/get/images/2011/08/scriptcommander-help.png"><img title="scriptcommander-help" src="http://kevinpelgrims.com/blog/get/images/2011/08/scriptcommander-help.png" alt="" width="509" height="503" /></a>
+ <a href="http://kevinpelgrims.com/blog/files/images/2011/08/scriptcommander-help.png"><img title="scriptcommander-help" src="http://kevinpelgrims.com/blog/files/images/2011/08/scriptcommander-help.png" alt="" width="509" height="503" /></a>
  <br /><span class="caption">PowerShell Script Commander help function</span>
 </div>
 
 <div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/get/images/2011/08/scriptcommander-rsm.png"><img title="scriptcommander-rsm" src="http://kevinpelgrims.com/blog/get/images/2011/08/scriptcommander-rsm.png" alt="" width="510" height="370" /></a>
+ <a href="http://kevinpelgrims.com/blog/files/images/2011/08/scriptcommander-rsm.png"><img title="scriptcommander-rsm" src="http://kevinpelgrims.com/blog/files/images/2011/08/scriptcommander-rsm.png" alt="" width="510" height="370" /></a>
  <br /><span class="caption">PowerShell Script Commander running the RSM script, with parameters</span>
 </div>
 
