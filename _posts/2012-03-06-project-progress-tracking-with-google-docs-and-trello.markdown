@@ -79,21 +79,19 @@ The first run of the script gets the titles and the values, after that only the 
 
 After a week my spreadsheet is filled with data and it's easy to use the Google Docs capabilities to make some nice charts. Below is a trend chart (it requires Flash to work, if you can't see anything, I blame Google!) Feel free to play around with it, you can hover over data and change the time range.
 
-<div class="chartcontainer nostyle">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0ApwJowwU8HpHdDBzUGx4dUxpT093VUxHZWplN2VhclE&transpose=0&headers=1&range=A3%3AE24&gid=0&pub=1","options":{"displayAnnotations":true,"vAxes":[{"viewWindowMode":"pretty","viewWindow":{}},{"viewWindowMode":"pretty","viewWindow":{}}],"booleanRole":"certainty","animation":{"duration":500},"vAxis":{"format":""},"useFirstColumnAsDomain":true,"displayZoomButtons":false,"wmode":"opaque","hAxis":{"maxAlternations":1,"format":""},"width":600,"height":371},"state":{},"view":["{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}"],"chartType":"AnnotatedTimeLine","chartName":"Trello progress"} </script>
-</div>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1zC3_g_2hzp_NcSNm7pgRk_MOZDr_EXgEeepogbdb2hY/pubchart?oid=2&amp;format=interactive"></iframe>
 
 Also a very interesting chart, is the area chart. This one shows us the accumulated number of tasks and the growth of the project.
 
-<div class="chartcontainer">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0ApwJowwU8HpHdDBzUGx4dUxpT093VUxHZWplN2VhclE&transpose=0&headers=1&range=A3%3AE24&gid=0&pub=1","options":{"vAxes":[{"title":null,"minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"maxValue":null},{"viewWindowMode":"pretty","viewWindow":{}}],"booleanRole":"certainty","animation":{"duration":500},"vAxis":{"format":""},"useFirstColumnAsDomain":true,"hAxis":{"maxAlternations":1,"format":""},"isStacked":true,"width":600,"height":371},"state":{},"view":["{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}"],"chartType":"AreaChart","chartName":"Trello progress"} </script>
-</div>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1zC3_g_2hzp_NcSNm7pgRk_MOZDr_EXgEeepogbdb2hY/pubchart?oid=3&amp;format=interactive"></iframe>
 
 These charts are based on the data in the table below (all times are in the Central European timezone, just so you know).
 
-<div class="chartcontainer">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0ApwJowwU8HpHdDBzUGx4dUxpT093VUxHZWplN2VhclE&transpose=0&headers=1&range=A3%3AE24&gid=0&pub=1","options":{"vAxes":[{"viewWindowMode":"pretty","viewWindow":{}},{"viewWindowMode":"pretty","viewWindow":{}}],"sortColumn":null,"booleanRole":"certainty","showRowNumber":false,"animation":{"duration":500},"page":"disable","vAxis":{"format":""},"useFirstColumnAsDomain":true,"hAxis":{"maxAlternations":1,"format":""},"width":600,"height":371},"state":{},"view":["{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}","{\"columns\":[0,1,2,3,4]}"],"chartType":"Table","chartName":"Data"} </script>
-</div>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1zC3_g_2hzp_NcSNm7pgRk_MOZDr_EXgEeepogbdb2hY/pubchart?oid=1&amp;format=interactive"></iframe>
+
+##Charts update
+
+The charts have stopped working properly and it seems to be impossible to fix them. If you'd like to see them, just open [this page](https://docs.google.com/spreadsheets/d/1zC3_g_2hzp_NcSNm7pgRk_MOZDr_EXgEeepogbdb2hY/pubhtml?gid=0&single=true) which has all the data and the three charts.
 
 #The script
 
