@@ -2,7 +2,7 @@
 layout: post
 title: "Getting involved - 2015 in review"
 date: 2016-01-07 22:00:00
-tags: android gradle
+tags: life android forward
 comments: true
 ---
 At the beginning of 2015, I decided I should get more involved in the Android community. I've been working on Android apps since 2011, but I hadn't gone to conferences, written a lot of blog posts, or made a lot of useful contributions on StackOverflow. Sure, I did a few small talks at DroidDevsDK in 2014, but that was it. So in 2015, I wanted to do better.
