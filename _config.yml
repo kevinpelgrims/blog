@@ -12,4 +12,4 @@ github_username:  kevinpelgrims
 markdown: kramdown
 
 # Outputting
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/
