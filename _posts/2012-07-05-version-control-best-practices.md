@@ -11,7 +11,7 @@ I'm one of the poor guys who had to deal with Visual SourceSafe, I used to work 
 
 Version control is everywhere and is much needed when programming. But everybody who has worked with a version control system with a number of people before knows that it is inevitable that at some point someone will commit something that doesn't build, or something that compiles but doesn't run. I have made mistakes like this, so have my colleagues and so have you!
 
-##Best practices
+## Best practices
 
 So to prevent this from happening again, I made a small list of best practices that I will try and follow myself. This list is applicable to every system out there!
 
@@ -39,6 +39,6 @@ If you want to remove some code that you might need again later, don't comment i
 
 Read the commit message and take a look at the code. This will improve your understanding of your colleagues' code, it can serve as a very simple code review and you might learn a thing or two.
 
-##Live by the rules, man
+## Live by the rules, man
 
 I'm trying to follow these rules every day to make work nicer for me and my colleagues. We don't have a pink sombrero around, so there's no fun in broken builds at the office ;-)

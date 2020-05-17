@@ -12,8 +12,10 @@ Git is an amazing tool that makes development in a team a lot easier for everyon
 
 A common pattern in a lot of repositories on Github is the double commit that is actually the same commit, but the first one had a mistake and the second is a fix:
 
-    664e6ac  (HEAD, master) Fix one line in verification method  (4 minutes ago)
-	3945ef1  Add verification method  (5 minutes ago)
+```
+664e6ac  (HEAD, master) Fix one line in verification method  (4 minutes ago)
+3945ef1  Add verification method  (5 minutes ago)
+```
 
 Now what is actually one commit, is split into two commits. This is bad for several reasons. The obvious reason is that it becomes harder to read through the commit history, which is now cluttered with useless entries. Another reason is that it becomes harder to use `git blame` to figure out when code was written and why. The fixed line is now part of a separate commit, and that commit's message just says "fixed issue". The person that stumbles upon that commit has no context.
 
@@ -25,8 +27,10 @@ All suggestions will rewrite the history of the repository. If you have already 
 
 It is easy to fix these commits. If you discover that you made a mistake in the last commit, you can just make new changes and amend the last commit:
 
-	git add .
-	git commit --amend
+```
+git add .
+git commit --amend
+```
 
 In practice, this removes the last commit, and creates a new one with the changes from the last commit and the new changes combined.
 
@@ -36,9 +40,11 @@ Amending a commit only works if there is a problem with the last commit. What if
 
 If you want to make changes to the 2 (or more) last commits, you can do a soft reset. This reset will cause the commits to disappear, while keeping all changes made. You can then make a new commit, combining all changes from the last couple of commits:
 
-	git reset HEAD~2
-	git add .
-	git commit
+```
+git reset HEAD~2
+git add .
+git commit
+```
 
 If you want to reset more than 2 commits, simply change the number after `HEAD~`.
 
@@ -48,7 +54,9 @@ If you want to reset multiple commits and split the changes up into more than on
 
 For more complicated situations, you can always use interactive rebase:
 
-	git rebase -i
+```
+git rebase -i
+```
 
 I will not write an entire rebase manual here, as that has [already](https://git-scm.com/docs/git-rebase) [been](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/) [done](http://nathanleclaire.com/blog/2014/09/14/dont-be-scared-of-git-rebase/). It is a powerful tool, though, and if you want to look like a Git wizard in front of your geeky friends, be sure to read up on rebasing.
 
@@ -56,7 +64,9 @@ I will not write an entire rebase manual here, as that has [already](https://git
 
 We have all seen people make huge commits:
 
-	511 lines added, 364 lines deleted
+```
+511 lines added, 364 lines deleted
+```
 
 This is horrible because it is completely impossible to figure out what this commit does. You need to delve into the code and figure out yourself which changes belong together. Also, consider the following scenario: Someone finds a bug in the application you are working on, and the decision is made to temporarily exclude the feature that causes the bug. You can either comment everything out (aka the bad way), or find the commit that introduced the feature and [revert](https://git-scm.com/docs/git-revert) it (aka the good way). If the entire feature is added in one huge commit that also added 4 other features, it becomes extremely hard to remove it. You would need to comment out chunks of code, or in the worst case even manually rewrite methods, or even entire classes, to a previous state.
 
@@ -64,7 +74,9 @@ This is horrible because it is completely impossible to figure out what this com
 
 So, you ended up making completely unrelated changes without committing. Worry not, we can fix this! Interactive staging to the rescue:
 
-	git add -i
+```
+git add -i
+```
 
 There is a [complete tutorial on interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) on the official Git website, so you can read up on it. But simply put, it makes it easy for you to partially commit changes you have made within the same file. For example, if you have added 2 methods in one class that are used for two different features, you can use interactive staging to do a commit with only the first method, and then a second commit with the other method.
 

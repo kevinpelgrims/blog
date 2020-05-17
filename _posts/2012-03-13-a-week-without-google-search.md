@@ -13,15 +13,15 @@ Now, I can live with all that, because their products are simply the best. At le
 
 One other reason for my experiment is my disappointment about Google using [Google+ results in search](http://www.amritray.com/2012/01/google-integrates-google-plus-into-google-search-results/) and upcoming plans to do more in that area. I've been using Google search in a different browser or in incognito mode a lot, because I don't need all this "personalization" crap. I just want good results, based on my query. Not based on my friends, on my interests or on my location.
 
-#DuckDuckGo
+## DuckDuckGo
 
 One search engine that seems to be getting some traction is [DuckDuckGo](http://duckduckgo.com/). After exploring [the settings](http://duckduckgo.com/settings.html) a bit, I could immediately see why. You can tweak the thing as much as you like and make sure you get the most neutral result possible. And it makes a big deal out of not saving anything you do and having a [user friendly privacy policy](http://duckduckgo.com/privacy.html). So I decided to use DuckDuckGo for my experiment.
 
-#Wolfram Alpha
+## Wolfram Alpha
 
 I've been using [Wolfram Alpha](http://www.wolframalpha.com/) for a while now, for  things other than real search. It's really good as a Wikipedia replacement if you just want basic information in an efficient way. For example, if I want some info on Copenhagen (where exactly is the city located, how many people live there, which timezone is it and how close is the nearest airport) I just [look for "copenhagen" in Wolfram Alpha](http://www.wolframalpha.com/input/?i=copenhagen) and everything is there. It also seems to be well integrated in DuckDuckGo, for example when you want to perform [currency conversion](http://www.wolframalpha.com/input/?i=50+dkk+in+eur). This is nice and I think I'll be using it more than usual this week, because I sometimes do some [calculations and conversions](http://www.google.com/insidesearch/features.html#unit) in Google.
 
-#The experiment
+## The experiment
 
 So I started my week by replacing the standard search engine in my browsers by DuckDuckGo. Now, I recently switched from .NET to Android development for my full-time job, so I need to look up a lot of things. A lot of times I want to look for things in the Android developer documentation. DuckDuckGo has this really cool thing called bang syntax that makes it super simple to search all kinds of sites, including the Android documentation, but also Wikipedia, YouTube, WordPress, a whole bunch of developer resources for a wide range of languages, maps, blogs, shopping, ... The list is huge! There are shortcuts available for some of the bang syntax and you can even do a Google search with DuckDuckGo using "!g". Crazy shit. If you want to know more about this awesomeness, check out [the entire list](https://duckduckgo.com/bang.html). This is a lot more convenient than adding search engines and shortcuts to my browser.
 
@@ -35,5 +35,5 @@ OpenStreetMap is present too. When looking for a city, a little map appears on t
 
 There's a [page dedicated to techies](https://duckduckgo.com/tech.html) (read: nerds) with some information on how to find math formulas, get your own IP address, look for things on StackExchange, github, ... If you want to find out [what a specific git command does](https://duckduckgo.com/?q=git+push), DuckDuckGo can tell it for you without even clicking through to a website.
 
-#Conclusion
+## Conclusion
 I'm making this all sound really good, because it is. But to be honest, I did have to use Google ( or at least "!g" ;-) ) a couple of times to find something for work, so I don't think I'm ready for a Google search free world. But the week of the experiment has passed for a while now and I haven't switched the default search engine for my browsers back to Google. I'm liking DuckDuckGo a lot and it will remain my default search engine for a while.

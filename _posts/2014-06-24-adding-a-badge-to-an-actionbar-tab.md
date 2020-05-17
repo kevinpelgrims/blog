@@ -11,11 +11,11 @@ An app I worked on a while ago has a notifications screen where the notification
 
 It's not possible to just add views to the tab view, so to do this you need to completely override it instead. I've seen a bunch of questions on StackOverflow regarding custom tab views and even adding a badge, but none of them seem to have a good answer. So I decided to write things up here when I was done with my solution.
 
-##Re-create the standard tab view
+## Re-create the standard tab view
 
 The first thing you need to do is re-create the standard tab view. It's possible to do this in code, creating a `TextView` and setting its properties. To make sure you get the text to look exactly like the standard tab view text, you can use the `TabText` `TextAppearance` from the support library. The code snippet below also sets a custom background, because one of the requirements was to have different colors for the tab indicators. You could possibly use a background from the support library there as well.
 
-{% highlight java %}
+```java
 public static View renderTabView(Context context, int titleResource, int backgroundResource) {
     TextView view = new TextView(context);
     view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,  ViewGroup.LayoutParams.MATCH_PARENT));
@@ -25,22 +25,22 @@ public static View renderTabView(Context context, int titleResource, int backgro
     view.setBackgroundResource(backgroundResource);
     return view;
 }
-{% endhighlight %}
+```
 
 This works, but I prefer using XML for views. If you want to add a badge to the tab view later, creating the layout in XML is a lot easier anyway.
 
-{% highlight xml %}
+```xml
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:textAppearance="@style/Widget.AppCompat.Light.ActionBar.TabText"/>
-{% endhighlight %}
+```
 
 The layout file sets most of the visual elements of the view, but you still need to set the `LayoutParams` in code, because of how the views get drawn by Android. The background resource here is still set in code, but if you have a fixed background, you can handle that in XML as well.
 
-{% highlight java %}
+```java
 public static View renderTabView(Context context, int titleResource, int backgroundResource) {
     TextView view = (TextView) LayoutInflater.from(context).inflate(R.layout.tab_default, null);
     // We need to manually set the LayoutParams here because we don't have a view root
@@ -49,25 +49,25 @@ public static View renderTabView(Context context, int titleResource, int backgro
     view.setBackgroundResource(backgroundResource);
     return view;
 }
-{% endhighlight %}
+```
 
-##Add the tab to the ActionBar
+## Add the tab to the ActionBar
 
 Now you need to set the custom view when you add the tab to the `ActionBar`. The `renderTabView()` method from before will create the view you need.
 
-{% highlight java %}
+```java
 actionBar.addTab(actionBar.newTab()
 	.setCustomView(renderTabView(NotificationsActivity.this, R.string.tab_invitations, R.drawable.tab_orange))
 	.setTabListener(tabListener));
-{% endhighlight %}
+```
 
 The `R.drawable.tab_orange` drawable is a selector that has a transparent background in most states, but has the tab indicator when selected.
 
-##Add the badge
+## Add the badge
 
 Now you can add the actual badge to the tab view. You should wrap the `TextView` from before in a `FrameLayout` and add a new `TextView` that will act as the badge.
 
-{% highlight xml %}
+```xml
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -93,13 +93,13 @@ Now you can add the actual badge to the tab view. You should wrap the `TextView`
         android:textSize="8dp"/>
 
 </FrameLayout>
-{% endhighlight %}
+```
 
 The `@drawable/badge_background` drawable is just an oval shape with a background color.
 
 You then also need to update `renderTabView` to take in a number to display in the badge. If you want to update the number in the badge after creating the tab view, you can use `updateTabBadge`. That method will also hide the badge if the number is not bigger than 0.
 
-{% highlight java %}
+```java
 public static View renderTabView(Context context, int titleResource, int backgroundResource, int badgeNumber) {
     FrameLayout view = (FrameLayout) LayoutInflater.from(context).inflate(R.layout.tab_badge, null);
     // We need to manually set the LayoutParams here because we don't have a view root
@@ -123,7 +123,7 @@ private static void updateTabBadge(TextView view, int badgeNumber) {
         view.setVisibility(View.GONE);
     }
 }
-{% endhighlight %}
+```
 
 And that's it. You now have a way to easily set a different background to every tab and add and update a badge on the tab view.
 

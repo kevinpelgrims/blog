@@ -14,32 +14,32 @@ Now, I might be doing something completely wrong, but for me this simply does no
 
 So I gave up on that and instead started to use a different way. With Gradle it is possible to create a repository from a basic directory using `flatDir`
 
-{% highlight groovy %}
+```groovy
 repositories {
     mavenCentral()
     flatDir {
         dirs 'libs'
     }
 }
-{% endhighlight %}
+```
 
 In this example, we'll put the .aar file in the `libs` folder, but you could use any folder you like. If you prefer to store your library projects in a separate folder like `aars` instead of `libs`, that is a possibility.
 
 The next step is of course to reference the actual library. There are two ways of doing this.
 
-{% highlight groovy %}
+```groovy
 dependencies {
    compile 'com.kevinpelgrims.library:library:1.0.0@aar'
 }
-{% endhighlight %}
+```
 
 The `@aar` is necessary to specify the type of the dependency. The namespace though seems to be completely useless. This is definitely a lot easier then setting up your own Maven repository. The annoying thing about this is that you still need to update the version on every update. In recent versions of Android Studio it is also possible to add the dependency in a different way.
 
-{% highlight groovy %}
+```groovy
 dependencies {
     compile(name:'libraryfilename', ext:'aar')
 }
-{% endhighlight %}
+```
 
 This makes it a lot easier to maintain the dependency itself. Now when you update the file, you don't need to update the version number in the Gradle build file.
 

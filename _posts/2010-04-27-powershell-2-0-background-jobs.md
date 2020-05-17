@@ -32,17 +32,17 @@ width="510"
 Get-Job gets a list of running or completed jobs in the current session, as you probably expected. Using this command we also get a lot of useful information, like state and command of the job.
 
 Using the Id we can find with the Get-Job command, we can also stop the execution a running job with `Stop-Job`.
-```
+``` powershell
 PS D:\ProjectsPS> Stop-Job 3
 ```
 
 If we want to get rid of the job completely, we simply remove it:
-```
+```powershell
 PS D:\ProjectsPS> Remove-Job 3
 ```
 
 What if you want to run a command that returns data? Use `Receive-Job`!
-```
+```powershell
 $job = Start-Job -scriptblock {Get-Process}
 Receive-Job -job $job
 ```

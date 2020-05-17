@@ -25,12 +25,14 @@ Since Android Studio 1.3, Gradle version 2.4 is the default. But you might not h
 
 The properties file for the [Gradle wrapper](http://kevinpelgrims.com/blog/2015/05/25/use-the-gradle-wrapper-for-your-android-projects/ "Using the Gradle Wrapper for Android projects") can be found in your project folder under `gradle/wrapper/` and is called `gradle-wrapper.properties`. The content of that file might look like this:
 
-	#Wed Apr 10 15:27:10 PDT 2013
-	distributionBase=GRADLE_USER_HOME
-	distributionPath=wrapper/dists
-	zipStoreBase=GRADLE_USER_HOME
-	zipStorePath=wrapper/dists
-	distributionUrl=https\://services.gradle.org/distributions/gradle-2.2.1-all.zip
+```
+#Wed Apr 10 15:27:10 PDT 2013
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.2.1-all.zip
+```
 
 You can manually change the version number `2.2.1` to `2.4` and the next time you run the wrapper, the new version is downloaded automatically.
 
@@ -44,9 +46,11 @@ Using Android Studio is even easier! Open the `Project Structure` dialog and cli
 
 There are a few Gradle properties that can speed up your builds a bit.
 
-    org.gradle.parallel=true
-    org.gradle.daemon=true
-    org.gradle.jvmargs=-Xms256m -Xmx1024m
+```
+org.gradle.parallel=true
+org.gradle.daemon=true
+org.gradle.jvmargs=-Xms256m -Xmx1024m
+```
 
 Enabling parallel builds with `org.gradle.parallel` is only useful if your project has multiple modules. You might, for example, have an Android app, a Java library, an Android project library, and an Android Wear module in the same project. When you enable parallel builds, some of the modules can be built at the same time, making use of all the cores in your machine.
 

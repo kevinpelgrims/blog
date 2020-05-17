@@ -17,7 +17,7 @@ Now, there are several ways to compile CoffeeScript locally (e.g. [from .NET](ht
 
 Installing the CoffeeScript compiler and Node.js tools is pretty straight forward when we open up a command window and use npm:
 
-```
+```console
 npm install coffee-script
 ```
 
@@ -41,7 +41,7 @@ Now, when we restart Sublime, we can access package control through the Command 
 After doing all that we already have some support for the language, i.e. syntax highlighting. But building the scripts will not yet work on Windows. To fix this, click `Preferences –> Browse Packages...` in Sublime. This will open an explorer window where you can see all the packages. Navigate to `CoffeeScript\Commands` and open the file `CoffeeScript.sublime-build`. Remove the line that has the path variable and change the cmd line to have `coffee.cmd` instead of `coffee`.
 
 Original version:
-```
+```json
 {
 "path": "$HOME/bin:/usr/local/bin:$PATH",
 "cmd": ["coffee","-c","$file"],
@@ -51,7 +51,7 @@ Original version:
 ```
 
 Edited version:
-```
+```json
 {
 "cmd": ["coffee.cmd","-c","$file"],
 "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
@@ -62,12 +62,12 @@ Edited version:
 Now create a file, save it as `test.coffee`, add some CoffeeScript, press `Ctrl+B` and Sublime creates a file called `test.js` in the same folder.
 
 CoffeeScript file:
-```
+```js
 console.log "Hello world!"
 ```
 
 JavaScript file:
-```
+```js
 (function() {
 
 console.log("Hello world!");
