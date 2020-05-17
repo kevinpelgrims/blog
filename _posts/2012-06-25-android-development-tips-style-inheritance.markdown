@@ -9,7 +9,7 @@ It's a good habit to use styles in your Android application to do layouts or sty
 
 ##Styles
 
-<img style="float: right; margin: 5px 0 5px 10px; width: 250px;" alt="android logo" src="http://kevinpelgrims.com/blog/files/images/2012/05/android.png" />
+<img style="float: right; margin: 5px 0 5px 10px; width: 250px;" alt="android logo" src="{{ site.baseurl }}/files/images/2012/05/android.png" />
 
 In a project at work, we have a style called "NormalText" which takes care of a lot of the text in the app. So instead of this:
 
