@@ -5,29 +5,27 @@ date: 2011-08-17 05:06:00
 tags: gis
 comments: true
 ---
-<p>
-Since I did a lot of GIS related stuff recently for work, I decided I'd have some fun with the Bing Maps API. I've been using Bing to display maps as a base for multiple layers of data in combination with MapGuide OS and needed to convert addresses to geocodes (coordinates). Afterwards I decided to play with it some more and I created a little app in C# that makes more use of Bing Maps.
-</p>
-<p>
-If you want to <strong>get started with the Bing API</strong>, you'll first need to <strong>get a key</strong>. More info on that can be found <a title="Bing Maps Key" href="http://msdn.microsoft.com/en-us/library/ff428642.aspx">on MSDN</a>.
-</p>
-<p>
+Since I did a lot of GIS related stuff recently for work, I decided I'd have some fun with the Bing Maps API. I've been using Bing to display maps as a base for multiple layers of data in combination with MapGuide OS and needed to convert addresses to coordinates. Afterwards I decided to play with it some more and I created a little app in C# that makes more use of Bing Maps.
+
+If you want to **get started with the Bing API**, you'll first need to **get a key**. More info on that can be found [on MSDN](http://msdn.microsoft.com/en-us/library/ff428642.aspx).
+
 Alright, now you got your key, let's get started!
-</p>
-<p>
-First thing you need to do to use the Bing Maps service, is <strong>adding a service reference</strong>. We'll start out with some geocoding, so we need the geocode service. The addresses of the available services can be found <a title="Bing Maps Services" href="http://msdn.microsoft.com/en-us/library/cc966738.aspx">here</a>.
-</p>
 
-<div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_servicereference.png"><img title="Bing Maps Service" src="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_servicereference.png" alt="" width="500" height="404" /></a>
- <br /><span class="caption">Click &quot;Add Service Reference...&quot; to open the service reference dialog</span>
-</div>
+## Setting up
 
-<p>
-The we can use the following code to "<strong>geocode</strong>" an address (get the coordinates):
-</p>
+First thing you need to do to use the Bing Maps service, is **adding a service reference**. We'll start out with some geocoding, so we need the geocode service. The addresses of the available services can be found [here](http://msdn.microsoft.com/en-us/library/cc966738.aspx "Bing Maps Services").
 
-<pre class="prettyprint">
+{% include
+    figure.html url="/files/images/2011/08/bingapi_servicereference.png"
+    description="Click 'Add Service Reference...' to open the service reference dialog"
+    width="510"
+%}
+
+# Geocoding
+
+We can use the following code to "geocode" an address (get the coordinates):
+
+```cs
 private String Geocode(string address)
 {
     GeocodeRequest geocodeRequest = new GeocodeRequest();
@@ -40,30 +38,28 @@ private String Geocode(string address)
     geocodeRequest.Query = address;
 
     // Make the geocode request
-    GeocodeServiceClient geocodeService = new GeocodeServiceClient(&quot;BasicHttpBinding_IGeocodeService&quot;);
+    GeocodeServiceClient geocodeService = new GeocodeServiceClient("BasicHttpBinding_IGeocodeService");
     GeocodeResponse geocodeResponse = geocodeService.Geocode(geocodeRequest);
 
     return GetGeocodeResults(geocodeResponse);
 }
-</pre>
+```
 
-<p>
 GetGeocodeResults is just a function that I made to print out the response on the screen. As seen here:
-</p>
-<div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_geocode.png"><img title="Bing Maps Geocode" src="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_geocode.png" alt="" width="500" height="333" /></a>
- <br /><span class="caption">Get the coordinates for an address</span>
-</div>
 
-<p>
+{% include
+    figure.html url="/files/images/2011/08/bingapi_geocode.png"
+    description="Get the coordinates for an address"
+    width="510"
+%}
+
 (There are some extra options available. You could, for example, tell the service to only return "high confidence" results. But I'm not going to talk about that here.)
-</p>
 
-<p>
-Because getting the coordinates was so easy, I decided to also implement <strong>reverse geocoding</strong>. Which is (as you would expect) converting coordinates to an address.
-</p>
+## Reverse geocoding
 
-<pre class="prettyprint">
+Because getting the coordinates was so easy, I decided to also implement reverse geocoding. Which is (as you would expect) converting coordinates to an address.
+
+```cs
 private String ReverseGeocode(double latitude, double longitude)
 {
     ReverseGeocodeRequest reverseGeocodeRequest = new ReverseGeocodeRequest();
@@ -76,23 +72,24 @@ private String ReverseGeocode(double latitude, double longitude)
     reverseGeocodeRequest.Location = new BingMapsSoap.GeocodeService.GeocodeLocation() { Latitude = latitude, Longitude = longitude };
 
     // Make the reverse geocode request
-    GeocodeServiceClient geocodeService = new GeocodeServiceClient(&quot;BasicHttpBinding_IGeocodeService&quot;);
+    GeocodeServiceClient geocodeService = new GeocodeServiceClient("BasicHttpBinding_IGeocodeService");
     GeocodeResponse geocodeResponse = geocodeService.ReverseGeocode(reverseGeocodeRequest);
 
     return GetGeocodeResults(geocodeResponse);
 }
-</pre>
+```
 
-<div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_reversegeocode.png"><img title="Bing Maps Reverse Geocode" src="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_reversegeocode.png" alt="" width="500" height="333" /></a>
- <br /><span class="caption">Converting coordinates to addresses is easy!</span>
-</div>
+{% include
+    figure.html url="/files/images/2011/08/bingapi_reversegeocode.png"
+    description="Converting coordinates to addresses is easy!"
+    width="510"
+%}
 
-<p>
-After getting this far in about 15 minutes of figuring it out and coding, I couldn't stop there! I decided to add some <strong>basic imagery</strong> for the address/coordinates that are converted. For imagery you need to <strong>add a reference</strong> to <strong>the imagery service</strong> first. Writing code for this is also pretty easy, as there are plenty of examples on MSDN that can be useful. It seems Microsoft really put some effort into  documenting this right :-)
-</p>
+## Imagery
 
-<pre class="prettyprint">
+After getting this far in about 15 minutes of figuring it out and coding, I couldn't stop there! I decided to add some basic imagery for the address/coordinates that are converted. For imagery you need to add a reference to the imagery service first. Writing code for this is also pretty easy, as there are plenty of examples on MSDN that can be useful. It seems Microsoft really put some effort into  documenting this right :-)
+
+```cs
 private void GetImagery(double latitude, double longitude)
 {
     MapUriRequest mapUriRequest = new MapUriRequest();
@@ -118,22 +115,21 @@ private void GetImagery(double latitude, double longitude)
 
     mapUriRequest.Options = mapUriOptions;
 
-    ImageryServiceClient imageryService = new ImageryServiceClient(&quot;BasicHttpBinding_IImageryService&quot;);
+    ImageryServiceClient imageryService = new ImageryServiceClient("BasicHttpBinding_IImageryService");
     MapUriResponse mapUriResponse = imageryService.GetMapUri(mapUriRequest);
     BitmapImage bmpImg = new BitmapImage(new Uri(mapUriResponse.Uri));
     bingImage.Source = bmpImg;
 }
-</pre>
+```
 
-<p>
 That code gives us this result:
-</p>
 
-<a href="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_imagery.png"><img title="Bing Maps Imagery" src="http://kevinpelgrims.com/blog/files/images/2011/08/bingapi_imagery.png" alt="" width="500" height="333" /></a>
+{% include
+    figure.html url="/files/images/2011/08/bingapi_imagery.png"
+    description="Bing Maps Imagery"
+    width="510"
+%}
 
-<p>
-Looks pretty good for a small app that took almost no time to make. The Bing Maps API is pretty straight-forward to work with and MSDN has some good samples to get started. So if you're interested in working with Bing Maps, be sure to check out <a title="Bing Maps on MSDN" href="http://msdn.microsoft.com/en-us/library/dd877180.aspx">the documentation</a>.
-</p>
-<p>
+Looks pretty good for a small app that took almost no time to make. The Bing Maps API is pretty straight-forward to work with and MSDN has some good samples to get started. So if you're interested in working with Bing Maps, be sure to check out [the documentation](http://msdn.microsoft.com/en-us/library/dd877180.aspx "Bing Maps on MSDN").
+
 Now go and have fun with this!
-</p>

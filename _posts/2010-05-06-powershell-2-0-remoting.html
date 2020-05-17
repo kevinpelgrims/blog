@@ -5,36 +5,28 @@ date: 2010-05-06 10:18:10
 tags: powershell
 comments: true
 ---
-<p>
-This is the last part (of four) in a series of articles on the new features in PowerShell 2.0. Last time we discussed <a href="http://kevinpelgrims.com/blog/2010/05/03/powershell-2-0-modules/">modules</a>, now it's time for <strong>remoting</strong>!
-</p>
+This is the last part (of four) in a series of articles on the new features in PowerShell 2.0. Last time we discussed [modules]({{ site.baseurl }}{% post_url 2010-05-03-powershell-2-0-modules %}), now it's time for **remoting**!
 
-<h2>Remoting</h2>
+## Remoting
 
-<p>
-One of the coolest new features is remoting. It is kind of like running remote desktop in command line. Altough it's an important piece of PowerShell 2.0, there's not a lot to explain about this. It's all pretty easy to use.
-</p>
-<p>
+One of the coolest new features is remoting. It is kind of like running remote desktop in command line. Although it's an important piece of PowerShell 2.0, there's not a lot to explain about this. It's all pretty easy to use.
+
 What's fun is that we have the option of executing one command on different remote computers at the same time. This will save system administrators a lot of time. To demonstrate this consider following command:
-</p>
-<pre class="prettyprint">
+
+```powershell
 Invoke-Command -ComputerName Server1 -scriptblock {Get-Service}
-</pre>
+```
 
-<p>
 This gets all services from Server1. To run this on multiple servers we just adjust the command:
-</p>
-<pre class="prettyprint">
+```powershell
 Invoke-Command -ComputerName Server1, Server2, Server3 -scriptblock {Get-Service}
-</pre>
+```
 
-<p>
 Now we get all services from Server1, Server2 and Server3 in a really easy way.
-</p>
-<p>
-Another way to use remoting is by connecting to a remote session with <strong>Enter-PSSession</strong>. You type commands in your local console, but everything is executed on the remote machine. Until you leave the remote session, by using <strong>Exit-PSSession</strong>.
-</p>
-<pre class="prettyprint">
+
+Another way to use remoting is by connecting to a remote session with `Enter-PSSession`. You type commands in your local console, but everything is executed on the remote machine. Until you leave the remote session, by using `Exit-PSSession`.
+
+```powershell
 PS D:\ProjectsPS> Enter-PSSession -ComputerName Server1
 
 PS Server1> Get-Process powershell
@@ -45,22 +37,13 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 PS Server1> Exit-PSSession
 PS D:\ProjectsPS>
-</pre>
+```
 
-<p>
-Of course, there are a lot of other commands available, so for the last time I will tell you to use the PowerShell 2.0 help: Get-Help about_PSSessions. Much can be learned from the official documentation (yes, it's really good!).
-</p>
-<p>
+Of course, there are a lot of other commands available, so once more, I will tell you to use the PowerShell 2.0 help: `Get-Help about_PSSessions`. Much can be learned from the official documentation (yes, it's really good!).
+
 And another good resource is of course Technet, where all the available cmdlets are explained in a more readable manner (see resources).
-</p>
-<p>
+
 So that's all for today folks! I hope you learned some things that will be useful in future projects.
-</p>
 
-<h2>Recources</h2>
-
-A list of resources on the discussed topics:
-
-<ul>
-	<li>All available cmdlets on Technet - <a href="http://technet.microsoft.com/en-us/library/dd347701.aspx">http://technet.microsoft.com/en-us/library/dd347701.aspx</a></li>
-</ul>
+## Resources
+* [All available cmdlets on Technet](http://technet.microsoft.com/en-us/library/dd347701.aspx)

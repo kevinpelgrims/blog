@@ -5,37 +5,37 @@ date: 2010-02-24 10:58:13
 tags: powershell
 comments: true
 ---
-<h2>What is this PowerShell script for?</h2>
+On my last project I had a few problems with a Sharepoint service on a server, we couldn't find the problem straightaway, but restarting the service always seemed to help for a while. Connecting to the server with Remote Desktop and restarting the service, however, is pretty timeconsuming for such a simple task, so I made a little PowerShell script to restart the service remotely.
 
-<p>On my last project I had a few problems with a Sharepoint service on a server, we couldn't find the problem straightaway, but restarting the service always seemed to help for a while. Connecting to the server with Remote Desktop and restarting the service, however, is pretty timeconsuming for such a simple task, so I made a little PowerShell script to restart the service remotely.</p>
+{% include
+    figure.html url="/files/images/2010/02/powershell_rsm.png"
+    description="A screenshot with the script in action"
+    width="510"
+%}
 
-<p>A screenshot with the script in action (click it for a better look):
-<br />
-<a href="http://kevinpelgrims.com/blog/files/images/2010/02/powershell_rsm.png"><img class="alignnone size-full wp-image-51" title="PowerShell_RSM" src="http://kevinpelgrims.com/blog/files/images/2010/02/powershell_rsm.png" alt="" width="509" height="336" /></a>
-</p>
+## Show me the script!
+So, how do I start to write this script? As a PowerShell beginner I Google a bit, and stumble upon this nice [post on The PowerShell Guy blog](http://thepowershellguy.com/blogs/posh/archive/2007/01/03/powershell-using-net-to-manage-remote-services.aspx]).
 
-<h2>Show me the script!</h2>
-<p>So, how do I start to write this script? As a PowerShell beginner I Google a bit, and stumle upon this nice <a title="post on The PowerShell Guy blog" href="http://thepowershellguy.com/blogs/posh/archive/2007/01/03/powershell-using-net-to-manage-remote-services.aspx">post on The PowerShell Guy blog</a>.</p>
-
-<pre class="prettyprint">
+```powershell
 [System.ServiceProcess.ServiceController]::GetServices('server')
 
 (new-Object System.ServiceProcess.ServiceController('Service','server')).Start()
 (new-Object System.ServiceProcess.ServiceController('Service','server')).WaitForStatus('Running',(new-timespan -seconds 5))
-</pre>
+```
 
-<p>Allright, that's pretty easy! This gives me a good way to deal with the services, now all I have to do is write a script around it that is easy to use for everyone working on the project.</p>
+Alright, that's pretty easy! This gives me a good way to deal with the services, now all I have to do is write a script around it that is easy to use for everyone working on the project.
 
-<p>Time to start thinking about the actions I'm going to implement.</p>
+Time to start thinking about the actions I'm going to implement.
 
-<p>Getting a list of all services, or a filtered list (based on the displayname of a service) is a pretty important function. I can pretty much copy the line from the blogpost mentioned above, but I will also provide the possibility to filter the list.</p>
+Getting a list of all services, or a filtered list (based on the displayname of a service) is a pretty important function. I can pretty much copy the line from the blogpost mentioned above, but I will also provide the possibility to filter the list.
 
-<pre class="prettyprint">[System.ServiceProcess.ServiceController]::GetServices($server) | where {$_.DisplayName -match $filter}
-</pre>
+```powershell
+[System.ServiceProcess.ServiceController]::GetServices($server) | where {$_.DisplayName -match $filter}
+```
 
-<p>To manage the services I'm going to implement start, stop and restart. Let's do this the clean way and create two functions, startService and stopService, I think this is pretty straightforward.</p>
+To manage the services I'm going to implement start, stop and restart. Let's do this the clean way and create two functions, `startService` and `stopService`, I think this is pretty straightforward.
 
-<pre class="prettyprint">
+```powershell
 function startService()
 {
     $serviceController = (new-Object System.ServiceProcess.ServiceController($service,$server))
@@ -49,17 +49,17 @@ function startService()
     }
     else {Write-Host "$service is already Running."}
 }
-</pre>
+```
 
-<p>Now, the server to target and the service to manage can always be different and should be provided by the user of the script. I also need a way to determine which action a user want to perform. When listing the services a filter could be useful. Including some help in the script is probably a good idea. I will use named parameters to implement all this. This should be on the first line in the script.</p>
+Now, the server to target and the service to manage can always be different and should be provided by the user of the script. I also need a way to determine which action a user want to perform. When listing the services a filter could be useful. Including some help in the script is probably a good idea. I will use named parameters to implement all this. This should be on the first line in the script.
 
-<pre class="prettyprint">
+```powershell
 param([string]$server, [string]$command, [string]$filter, [string]$service, [switch]$help)
-</pre>
+```
 
-<p>There are my parameters, this makes the script a bit universal in it's use. But this also means a user can provide a service that doesn't exist. Let's write a function to check for that.</p>
+There are my parameters, this makes the script a bit universal in it's use. But this also means a user can provide a service that doesn't exist. Let's write a function to check for that.
 
-<pre class="prettyprint">
+```powershell
 function checkServiceExists()
 {
   if($service -like '')
@@ -81,13 +81,13 @@ function checkServiceExists()
     exit
   }
 }
-</pre>
+```
 
-<p>So, I'm checking if the service name contains a value and, if it does, that it exists on the remote machine. Otherwise the script tells the user to edit the parameter. Great!</p>
+So, I'm checking if the service name contains a value and, if it does, that it exists on the remote machine. Otherwise the script tells the user to edit the parameter. Great!
 
-<p>Now I need to check which action a user wants to perform. This can simply be done using If and ElseIf, it could also be done with the Switch statement. When a user types a command that doesn't exist, a message will clarify this.</p>
+Now I need to check which action a user wants to perform. This can simply be done using `If` and `ElseIf`, it could also be done with the `Switch` statement. When a user types a command that doesn't exist, a message will clarify this.
 
-<pre class="prettyprint">
+```powershell
 if($command -like '') {}
 elseif($command -like 'get')
 {
@@ -110,11 +110,11 @@ else
 {
   Write-Host "'$command' is an invalid command."
 }
-</pre>
+```
 
-<p>This PowerShell stuff is actually pretty easy! Now all I need to implement is the help.</p>
+This PowerShell stuff is actually pretty easy! Now all I need to implement is the help.
 
-<pre class="prettyprint">
+```powershell
 if($help)
 {
   Write-Host @"
@@ -128,17 +128,17 @@ Parameters explanation.
 "@
   exit
 }
-</pre>
+```
 
-<h2>The complete 'manage services remotely' script</h2>
+## The complete 'manage services remotely' script
 
-<p>Allright, I now have a working script to remotely manage services, that provides some feedback when users provide wrong information. This will definately be useful in future projects too.</p>
+Alright, I now have a working script to remotely manage services, that provides some feedback when users provide wrong information. This will definately be useful in future projects too.
 
-<p>There is still a lot of room for improvements, so feel free to play around with my script and let me know if you add something cool to it. You can download the complete script here.</p>
+There is still a lot of room for improvements, so feel free to play around with my script and let me know if you add something cool to it. You can download the complete script here.
 
-<p><strong>UPDATE</strong>: I updated the code for the file, because it's changed since first posting this, by adding the help in a standard way and some adjustments here and there.</p>
+**UPDATE**: I updated the code for the file, because it's changed since first posting this, by adding the help in a standard way and some adjustments here and there.
 
-<pre class="prettyprint">
+```powershell
 ###################################
 ##  RemoteServiceManager.ps1     ##
 ##   by Kevin Pelgrims           ##
@@ -258,4 +258,4 @@ Manage services on a remote computer.
 http://kevinpelgrims.com
 
 #>
-</pre>
+```

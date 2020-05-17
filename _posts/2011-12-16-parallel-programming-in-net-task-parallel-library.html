@@ -5,139 +5,117 @@ date: 2011-12-17 06:04:00
 tags: parallel .net
 comments: true
 ---
-<p>
-I have talked about parallel programming in .NET before, very briefly: <a title="Parallel programming in .NET – Introduction" href="http://kevinpelgrims.com/blog/2010/08/30/parallel-programming-in-net-introduction/">Parallel programming in .NET - Introduction</a>. This follow-up post is long overdue :)
-</p>
+I have talked about parallel programming in .NET before, very briefly: [Parallel programming in .NET - Introduction]({{ site.baseurl }}{% post_url 2010-08-30-parallel-programming-in-net-introduction %}). This follow-up post is long overdue :)
 
-<h2>What is the TPL?</h2>
-<p>
-The Task Parallel Library is a set of APIs present in the <span style="font-family:'Courier New';">System.Threading</span> and <span style="font-family:'Courier New';">System.Threading.Tasks</span> namespaces. The point of these APIs is to make parallel programming easier to read and code. The library exposes the <span style="font-family:'Courier New';">Parallel.For</span> and <span style="font-family:'Courier New';">Parallel.ForEach</span> methods to enable parallel execution of loops and takes care of spawning and terminating threads, as well as scaling to multiple processors.
-</p>
+## What is the TPL?
 
-<h2>How do we use the TPL?</h2>
-<p>Following code uses the sequential and the parallel approach to go over a for-loop with some heavy calculations. I use the <span style="font-family:'Courier New';">StopWatch</span> class to compare the results in a command window.
-</p>
+The Task Parallel Library is a set of APIs present in the `System.Threading` and `System.Threading.Tasks` namespaces. The point of these APIs is to make parallel programming easier to read and code. The library exposes the `Parallel.For` and `Parallel.ForEach` methods to enable parallel execution of loops and takes care of spawning and terminating threads, as well as scaling to multiple processors.
 
-<pre class="prettyprint">
+## How do we use the TPL?
+
+Following code uses the sequential and the parallel approach to go over a for-loop with some heavy calculations. I use the `StopWatch` class to compare the results in a command window.
+
+```cs
 //Sequential
 watch = new Stopwatch();
 watch.Start();
-for (int i = 0; i &lt; 20000; i++)
+for (int i = 0; i < 20000; i++)
 {
     SomeHeavyCalculations(i);
 }
 watch.Stop();
-Console.WriteLine(&quot;Sequential Time: &quot; + watch.Elapsed.Seconds.ToString());
+Console.WriteLine("Sequential Time: " + watch.Elapsed.Seconds.ToString());
 
 //Parallel
 watch = new Stopwatch();
 watch.Start();
-System.Threading.Tasks.Parallel.For(0, 20000, i =&gt;
+System.Threading.Tasks.Parallel.For(0, 20000, i =>
 {
     SomeHeavyCalculations(i);
 }
 );
 watch.Stop();
-Console.WriteLine(&quot;Parallel Time: &quot; + watch.Elapsed.Seconds.ToString());
-</pre>
+Console.WriteLine("Parallel Time: " + watch.Elapsed.Seconds.ToString());
+```
 
-<p>
 The result of running this on my laptop (with multiple cores) looks like this:
-</p>
 
-<div class="imagecaption" style="width: 300px;">
- <a href="http://kevinpelgrims.com/blog/files/images/2011/12/parallel_net_comparison.png"><img title="Sequential vs TPL - Comparison" src="http://kevinpelgrims.com/blog/files/images/2011/12/parallel_net_comparison.png?w=300" alt="" width="300" height="114" /></a>
- <br /><span class="caption">Result of comparison sequential - parallel</span>
-</div>
+{% include
+    figure.html url="/files/images/2011/12/parallel_net_comparison.png"
+    description="Result of comparison sequential - parallel"
+    width="300"
+%}
 
-<p>
 As you can see, the parallel for-loop runs A LOT faster than the sequential version. By using all the available processing power, we can speed up loops significantly!
-</p>
 
-<p>
 Below is a screenshot of the task manager keeping track of what's happening  while executing the sequential and the parallel. What we can see here is that at first (where the red arrow is pointing at) we only use 1 core heavily. When the parallel code kicks in, all cores peak.
-</p>
 
-<div class="imagecaption" style="width: 500px;">
- <a href="http://kevinpelgrims.com/blog/files/images/2011/12/parallel_net_taskman.png"> <img title="Sequential vs TPL - Task Manager" src="http://kevinpelgrims.com/blog/files/images/2011/12/parallel_net_taskman.png" alt="" width="500" height="140" /></a>
- <br /><span class="caption">Task manager during comparison sequential - parallel</span>
-</div>
+{% include
+    figure.html url="/files/images/2011/12/parallel_net_taskman.png"
+    description="Task manager during comparison sequential - parallel"
+    width="510"
+%}
 
-<p>
 So, looking at the above code, implementing all this parallelism doesn’t seem to be that hard. The TPL makes it pretty easy to make use of all the processors in a machine.
-</p>
 
-<h2>Creating and running tasks</h2>
-<p>
-It’s possible to run a task implicitly by using the <span style="font-family:'Courier New';">Parallel.Invoke</span> method.
-</p>
+## Creating and running tasks
 
-<pre class="prettyprint">
-Parallel.Invoke(() =&gt; DoSomething())
-Parallel.Invoke(() =&gt; DoSomething(), () =&gt; DoSomethingElse())
-</pre>
+It’s possible to run a task implicitly by using the `Parallel.Invoke` method.
 
-<p>
-All you need to do is pass in a delegate, using lamba expressions makes this easy. You can call a named method or have some inline code. If you want to start more tasks concurrently, you can just insert more delegates to the same <span style="font-family:'Courier New';">Parallel.Invoke</span> method.
-</p>
-<p>
+```cs
+Parallel.Invoke(() => DoSomething())
+Parallel.Invoke(() => DoSomething(), () => DoSomethingElse())
+```
+
+All you need to do is pass in a delegate, using lambda expressions makes this easy. You can call a named method or have some inline code. If you want to start more tasks concurrently, you can just insert more delegates to the same `Parallel.Invoke` method.
+
 If you want more control over what’s happening, you’ll need to use a Task object, though. The task object has some interesting methods and properties that we can use to control the flow of our parallel code.
-</p>
-<p>
-It is possible to use <span style="font-family:'Courier New';">new Task()</span> to create a new task object, but it’s a best practice to use the task factory. (Note that you can’t use the task factory if you want to separate the creation and the scheduling of the task.)
-</p>
 
-<pre class="prettyprint">
+It is possible to use `new Task()` to create a new task object, but it’s a best practice to use the task factory. (Note that you can’t use the task factory if you want to separate the creation and the scheduling of the task.)
+
+```cs
 // Create a task and start it
-var task1 = new Task(() =&gt; Console.WriteLine(&quot;Task1 says hi!&quot;));
+var task1 = new Task(() => Console.WriteLine("Task1 says hi!"));
 task1.Start();
 
 // Create a task using the task factory
-var task1 = Task.Factory.StartNew(() =&gt; Console.WriteLine(&quot;Task1 says hi!&quot;));
-</pre>
+var task1 = Task.Factory.StartNew(() => Console.WriteLine("Task1 says hi!"));
+```
 
-<p>
-You can also get results from a task, by accessing the <span style="font-family:'Courier New';">Result</span> property. If you access it before the task is completed, the thread will be blocked until the result is available.
-</p>
+You can also get results from a task, by accessing the `Result` property. If you access it before the task is completed, the thread will be blocked until the result is available.
 
-<pre class="prettyprint">
-Task&lt;int&gt; taskreturn = Task.Factory.StartNew(() =&gt;
+```cs\
+taskreturn = Task.Factory.StartNew(() =>
   {
     int calc = 3 + 3;
     return calc;
   });
 int result = taskreturn.Result;
-</pre>
+```
 
-<h2>To be continued..</h2>
-<p>
-You can chain tasks by using the <span style="font-family:'Courier New';">Task.ContinueWith</span> method. It’s also possible to access the result of the preceding task in the next one, using the <span style="font-family:'Courier New';">Result</span> property.
-</p>
+## To be continued..
 
-<pre class="prettyprint">
+You can chain tasks by using the `Task.ContinueWith` method. It’s also possible to access the result of the preceding task in the next one, using the `Result` property.
+
+```cs
 // Regular continuation
-Task&lt;int&gt; task1 = Task.Factory.StartNew(() =&gt; 5);
-Task&lt;string&gt; task2 = task1.ContinueWith(x =&gt; PrintInt(x.Result));
+Task<int> task1 = Task.Factory.StartNew(() => 5);
+Task<string> task2 = task1.ContinueWith(x => PrintInt(x.Result));
 
 // Chained continuation
-Task&lt;string&gt; task1 = Task.Factory.StartNew(() =&gt; 5)
-                     .ContinueWith(x =&gt; PrintInt(x.Result));
-</pre>
+Task<string> task1 = Task.Factory.StartNew(() => 5)
+                     .ContinueWith(x => PrintInt(x.Result));
+```
 
-<p>
-The methods <span style="font-family:'Courier New';">ContinueWhenAll()</span> and <span style="font-family:'Courier New';">ContinueWhenAny()</span> make it possible to continue from multiple tasks by taking in an array of tasks to wait on and the action to be undertaken when those have finished. More about those functions can be found <a title="TaskFactory Methods" href="http://msdn.microsoft.com/en-us/library/dd321479.aspx">on MSDN</a>.
-</p>
+The methods `ContinueWhenAll()` and `ContinueWhenAny()` make it possible to continue from multiple tasks by taking in an array of tasks to wait on and the action to be undertaken when those have finished. More about those functions can be found [on MSDN](http://msdn.microsoft.com/en-us/library/dd321479.aspx).
 
-<h2>The force is strong with this one</h2>
-<p>
+## The force is strong with this one
+
 We only looked at a few functions of the TPL and I think it’s clear this is a very powerful library. When working on applications that need a lot of processing power, parallel programming in .NET can make it easier to improve performance, a lot.
-</p>
 
-<h2>Resources</h2>
+## Resources
 
 Of course there is a lot more to TPL than covered in this small introduction, so go ahead and explore!
 
-<ul>
-	<li>MSDN chapter on Task Parallel Library - <a href="http://msdn.microsoft.com/en-us/library/dd460717.aspx">http://msdn.microsoft.com/en-us/library/dd460717.aspx</a></li>
-	<li>Blog of the Parallel Extensions team - <a href="http://blogs.msdn.com/b/pfxteam/">http://blogs.msdn.com/b/pfxteam/</a></li>
-</ul>
+*   [MSDN chapter on Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717.aspx)
+*   [Blog of the Parallel Extensions team](http://blogs.msdn.com/b/pfxteam/)

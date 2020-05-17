@@ -5,32 +5,28 @@ date: 2010-04-29 19:37:10
 tags: powershell
 comments: true
 ---
-<p>
-This is part two of four in a series of articles on the new features in PowerShell 2.0. Last time we discussed <a href="http://kevinpelgrims.com/blog/2010/04/27/powershell-2-0-background-jobs/">background jobs</a>, now it's time for <strong>transactions</strong>!
-</p>
+This is part two of four in a series of articles on the new features in PowerShell 2.0. Last time we discussed [background jobs]({{ site.baseurl }}{% post_url 2010-04-27-powershell-2-0-background-jobs %}), now it's time for **transactions**!
 
-<h2>Transactions</h2>
+## Transactions
 When you run scripts, generally, three things can happen:
-<ul>
-	<li>The script runs, my favorite</li>
-	<li>The script fails, this is not cool, but you can probably fix it</li>
-	<li>The script runs only partially and dies unexpectedly in the middle of executing stuff. This is very bad and this is probably not what you want.</li>
-</ul>
-<p>
-PowerShell 2.0 has the solution: transactions. They can help you to solve these issues and make sure the script just succeeds, or fails, but nothing inbetween.
-<div>Starting a transaction is pretty easy with the <strong>Start-Transaction</strong> command, but it doesn't magically fix everything. You still have to use the <strong>-UseTransaction</strong> switch on your regular commands. Commands that use this switch will run inside the scope of the transaction, those who don't will run on the outside. To commit the results of the transaction, use <strong>Complete-Transaction</strong>. If there is something wrong and you need to undo the changes, call <strong>Undo-Transaction</strong>. A little transactionsdemo in the new Microsoft PowerShell ISE:
-<br />
-<a href="http://kevinpelgrims.com/blog/files/images/2010/04/transactions.png"><img title="PowerShell_transactions" src="http://kevinpelgrims.com/blog/files/images/2010/04/transactions.png" alt="" width="510" height="371" /></a>
-<br />
-This small script creates a transactionscope and creates a string object. Then we append some text to it twice. Once out of the transactionscope, the second time inside of the transactionscope. When we do a ToString(), we see that the text that is appended inside of the transaction is not visible at this point. This is kind of normal, because the transaction is not yet completed. Then we complete the transaction and do a ToString() again, and we can see the second text too.
-</p>
-<p>
-Again, use the power of the shell for more info: Get-Help about_Transaction
-</p>
+* The script runs, my favorite
+* The script fails, this is not cool, but you can probably fix it
+* The script runs only partially and dies unexpectedly in the middle of executing stuff. This is very bad and this is probably not what you want.
 
-<h2>Recources</h2>
-A list of resources on the discussed topics:
-<ul>
-	<li>All available cmdlets on Technet - <a href="http://technet.microsoft.com/en-us/library/dd347701.aspx">http://technet.microsoft.com/en-us/library/dd347701.aspx</a></li>
-	<li>Transactions quickstart on the official PowerShell Blog - <a href="http://blogs.msdn.com/powershell/archive/2008/05/09/powershell-transactions-quickstart.aspx">http://blogs.msdn.com/powershell/archive/2008/05/09/powershell-transactions-quickstart.aspx</a></li>
-</ul>
+PowerShell 2.0 has the solution: transactions. They can help you to solve these issues and make sure the script just succeeds, or fails, but nothing in between.
+
+Starting a transaction is pretty easy with the `Start-Transaction` command, but it doesn't magically fix everything. You still have to use the `-UseTransaction` switch on your regular commands. Commands that use this switch will run inside the scope of the transaction, those who don't will run on the outside. To commit the results of the transaction, use `Complete-Transaction`. If there is something wrong and you need to undo the changes, call `Undo-Transaction`. A little transactions demo in the new Microsoft PowerShell ISE:
+
+{% include
+    figure.html url="/files/images/2010/04/transactions.png"
+    description=""
+    width="510"
+%}
+
+This small script creates a transaction scope and creates a string object. Then we append some text to it twice. Once out of the transaction scope, the second time inside of the transaction scope. When we do a `ToString()`, we see that the text that is appended inside of the transaction is not visible at this point. This is kind of normal, because the transaction is not yet completed. Then we complete the transaction and do a `ToString()` again, and we can see the second text too.
+
+Again, use the power of the shell for more info: `Get-Help about_Transaction`
+
+## Resources
+* [All available cmdlets on Technet](http://technet.microsoft.com/en-us/library/dd347701.aspx)
+* [Transactions quickstart on the official PowerShell Blog](http://blogs.msdn.com/powershell/archive/2008/05/09/powershell-transactions-quickstart.aspx)
