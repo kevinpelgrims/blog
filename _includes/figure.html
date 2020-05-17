@@ -1,0 +1,14 @@
+<figure class="image">
+    <img
+            src="{{ site.baseurl }}{{ include.url }}"
+            {% if include.description != '' %}
+            alt="{{ include.description }}"
+            {% endif %}
+            {% if include.description != '' %}
+            width="{{ include.width }}"
+            {% endif %}
+    />
+    {% if include.description != '' %}
+    <figcaption>{{ include.description }}</figcaption>
+    {% endif %}
+</figure>
