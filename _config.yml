@@ -10,6 +10,11 @@ github_username:  kevinpelgrims
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Outputting
 permalink: /:year/:month/:day/:title/
