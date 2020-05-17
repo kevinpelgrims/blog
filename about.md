@@ -13,7 +13,7 @@ Currently I'm trying to improve the lives of people with skin diseases at [LEO I
 I have also worked on the official [DuckDuckGo](https://duckduckgo.com/) apps for [Android](https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android) and [Windows 8](http://apps.microsoft.com/windows/app/duckduckgo/d526ba1b-a065-4cb9-a6c6-bf30f6123e2b).
 
 My latest project is [Forward](https://forwardapphq.com), which can also be [found on Google Play](https://play.google.com/store/apps/details?id=com.commanigy.forward&utm_source=kevinpelgrims.com), and is meant to help raise money for charity.
-I'm a co-organizer and a regular speaker at the [Android developers group in Copenhagen](http://lanyrd.com/series/droiddevsdk/).
+I'm a co-organizer and a regular speaker at the [Android developers group in Copenhagen](https://www.meetup.com/DroidDevs-CPH/).
 I maintain several Android apps in my spare time and I like to experiment with server-side technology.
 
-When I'm not busy writing code, I'm most likely playing the guitar with my wife and our cat.
+When I'm not busy writing code, I'm most likely playing an instrument or recording music.

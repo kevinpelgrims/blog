@@ -1,12 +1,17 @@
-.share-group a, .fa-twitter, .fa-facebook-square, .fa-google-plus-square {
+#share-group {
+	font-size: 1.25em;
+	margin-bottom: 24px;
+}
+
+#share-group a {
 	display: inline-block;
 	margin-right: 10px;
-	color: $share-color;
+	color: #bbc7cc;
 	transition: color 0.2s ease 0s;
 	text-decoration: none;
-	
+
 	&:hover {
-		color: $share-color-dark;
+		color: #50585d;
 		text-decoration: none;
 	}
 }
