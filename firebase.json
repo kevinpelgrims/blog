@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "_site",
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/blog/",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": [
+      "**/.*"
+    ]
+  }
+}
