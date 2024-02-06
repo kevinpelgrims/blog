@@ -5,7 +5,7 @@ date: 2010-05-06 10:18:10
 tags: powershell
 comments: true
 ---
-This is the last part (of four) in a series of articles on the new features in PowerShell 2.0. Last time we discussed [modules]({{ site.baseurl }}{% post_url 2010-05-03-powershell-2-0-modules %}), now it's time for **remoting**!
+This is the last part (of four) in a series of articles on the new features in PowerShell 2.0. Last time we discussed [modules]({% post_url 2010-05-03-powershell-2-0-modules %}), now it's time for **remoting**!
 
 ## Remoting
 

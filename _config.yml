@@ -1,10 +1,9 @@
 # Site settings
 title: Kevin Pelgrims
 email: kevin.pelgrims@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Experiments with Android, Git, Gradle, the web, .NET and PowerShell.
-baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://kevinpelgrims.com" # the base hostname & protocol for your site
+url: "http://kevinpelgrims.com"
 twitter_username: kevinpelgrims
 github_username:  kevinpelgrims
 
@@ -17,4 +16,4 @@ kramdown:
   syntax_highlighter: rouge
 
 # Outputting
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
