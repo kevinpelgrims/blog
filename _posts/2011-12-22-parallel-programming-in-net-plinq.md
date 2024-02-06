@@ -5,7 +5,7 @@ date: 2011-12-23 06:02:00
 tags: parallel .net
 comments: true
 ---
-Now that we've covered the [Task Parallel Library]({{ site.baseurl }}{% post_url 2011-12-16-parallel-programming-in-net-task-parallel-library %}), it's time to move on.
+Now that we've covered the [Task Parallel Library]({% post_url 2011-12-16-parallel-programming-in-net-task-parallel-library %}), it's time to move on.
 
 ## What is PLINQ?
 
