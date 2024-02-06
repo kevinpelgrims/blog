@@ -5,7 +5,7 @@ date: 2010-04-27 19:19:07
 tags: powershell
 comments: true
 ---
-I already told you about a few [cool new features]({{ site.baseurl }}{% post_url 2010-02-17-powershell-2-what-is-it-and-whats-new %}) in PowerShell 2.0, now it's time to play with them. I've divided one large article into four small ones, to make it a bit more readable. We'll start with **background jobs**, **transactions** and **modules** and end with **remoting**. These will become very useful for the PowerShell master.
+I already told you about a few [cool new features]({% post_url 2010-02-17-powershell-2-what-is-it-and-whats-new %}) in PowerShell 2.0, now it's time to play with them. I've divided one large article into four small ones, to make it a bit more readable. We'll start with **background jobs**, **transactions** and **modules** and end with **remoting**. These will become very useful for the PowerShell master.
 
 ## Background jobs
 

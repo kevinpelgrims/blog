@@ -9,7 +9,7 @@ comments: true
 >After running into it again I decided to post it anyway and upload the code to [Codeplex](http://pscommander.codeplex.com/).
 >So, here goes!
 
-A while back I created this PowerShell script to remotely manage services (see [Remote Service Manager]({{ site.baseurl }}{% post_url 2010-02-24-powershell-remote-service-manager %})), a bit later I made the available help a bit more professional (see [Add help to your own PowerShell scripts]({{ site.baseurl }}{% post_url 2010-05-10-add-help-to-your-own-powershell-scripts %})). Now I was thinking it would be cool to create an interface in .NET for this script. So I started developing a WinForm application around the script. Initially, it looked like this:
+A while back I created this PowerShell script to remotely manage services (see [Remote Service Manager]({% post_url 2010-02-24-powershell-remote-service-manager %})), a bit later I made the available help a bit more professional (see [Add help to your own PowerShell scripts]({% post_url 2010-05-10-add-help-to-your-own-powershell-scripts %})). Now I was thinking it would be cool to create an interface in .NET for this script. So I started developing a WinForm application around the script. Initially, it looked like this:
 
 {% include
     figure.html url="/files/images/2011/08/remoteservicemanager.png"
