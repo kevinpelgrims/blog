@@ -1,4 +1,10 @@
+# Jekyll
 _site
 .sass-cache
+
+# Development
 .idea/
 vendor/
+
+# OS
+.DS_Store
