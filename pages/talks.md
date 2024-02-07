@@ -15,7 +15,7 @@ permalink: /talks/
 
 ### 2016
 
-* Understanding Gradle for Android @ DevTalks (Bucharest, Rumania) - November 20
+* Understanding Gradle for Android @ DevTalks (Bucharest, Romania) - November 20
 * [Understanding Gradle for Android](https://gotocon.com/cph-2016/presentations/show_talk.jsp?oid=7965) @ GOTO (Copenhagen, Denmark) - October 4
 
 ### 2015
