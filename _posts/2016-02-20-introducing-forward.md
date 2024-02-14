@@ -20,4 +20,4 @@ Because these items are real-life objects, everything on Forward is geographical
 Growth is quite slow at the moment, but we have just announced a partnership with a charity organization in Denmark called [Mødrehjælpen](https://moedrehjaelpen.dk), which we hope will kick start user acquisition. We are also actively looking for more partnerships.
 Forward is a way for charity organizations to passively get some extra donations. All we ask in return, is that they make sure to let the world know they are a part of the Forward network.
 
-If you happen to work for a charity organization, or know someone who does, or just have some questions about the project, get in touch: [kevin@forwardapphq.com](kevin@forwardapphq.com). I really hope we can make a difference, and help charity organizations that need money for all kinds of good causes.
+If you happen to work for a charity organization, or know someone who does, or just have some questions about the project, get in touch: [kevin@forwardapphq.com](mailto:kevin@forwardapphq.com). I really hope we can make a difference, and help charity organizations that need money for all kinds of good causes.
