@@ -2,8 +2,7 @@
 layout: post
 title: "A week without Google search"
 date: 2012-03-13 09:44:26
-tags: tools web general
-comments: true
+tags: ["tools", "web", "general"]
 ---
 With all the commotion about [Google's new privacy policy](http://www.zdnet.com/blog/btl/googles-new-privacy-policy-the-good-bad-scary/67893) and realizing how much the Internet giant controls my online life, I wanted to do an experiment. A week without using Google for search.
 

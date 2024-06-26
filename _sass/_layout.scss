@@ -26,6 +26,7 @@ $header-footer-shadow-color:        $grey-color-light;
     float: left;
 
     &,
+    &:hover,
     &:visited {
         color: $header-footer-text-color;
     }

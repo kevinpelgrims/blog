@@ -2,8 +2,7 @@
 layout: post
 title: "PowerShell 2.0 - Transactions"
 date: 2010-04-29 19:37:10
-tags: powershell
-comments: true
+tags: ["powershell"]
 ---
 This is part two of four in a series of articles on the new features in PowerShell 2.0. Last time we discussed [background jobs]({% post_url 2010-04-27-powershell-2-0-background-jobs %}), now it's time for **transactions**!
 

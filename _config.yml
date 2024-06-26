@@ -17,3 +17,7 @@ kramdown:
 
 # Outputting
 permalink: /blog/:year/:month/:day/:title/
+collections:
+  tags:
+    output: true
+    permalink: tags/:path/

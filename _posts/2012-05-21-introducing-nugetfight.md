@@ -2,8 +2,7 @@
 layout: post
 title: "Introducing NuGetFight"
 date: 2012-05-21 11:01:14
-tags: .net web
-comments: true
+tags: [".net", "web"]
 ---
 I've recently been teaming up with [Koen Metsu](http://koenmetsu.com) to create [NuGetFight](http://nugetfight.com), a website that makes it easier to decide on which [NuGet](http://nuget.org) package to choose. We sometimes find it hard to decide which packages to use when we start working on a project. Which one is best supported? Which one has good documentation? We thougth that this should be easier to compare and figured that queries with more packages and downloads also have better support and documentation. Sure, this is not a scientific way, but it can help and also, we're not really taking all of this *too* serious (in case you haven't noticed).
 

@@ -2,8 +2,7 @@
 layout: post
 title: "Unit Testing Best Practices and Test Reviews with Roy Osherove"
 date: 2011-10-28 10:58:02
-tags: .net testing
-comments: true
+tags: [".net", "testing"]
 ---
 Yesterday I attended a session on unit testing by [Roy Osherove](http://osherove.com/) in Copenhagen. As I am trying to learn more about unit testing and TDD by applying it in a pet project, it was very interesting to see what a veteran like Roy had to say about the subject of unit testing. Also very interesting was his approach in this session, as he tried to teach us about good habits by showing us bad (real world) examples.
 

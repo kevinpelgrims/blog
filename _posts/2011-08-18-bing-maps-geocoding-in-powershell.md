@@ -2,8 +2,7 @@
 layout: post
 title: "Bing Maps - Geocoding in PowerShell"
 date: 2011-08-19 05:05:00
-tags: gis powershell
-comments: true
+tags: ["gis", "powershell"]
 ---
 Since I had fun using the Bing Maps API in C# (see [Bing Maps - Geocoding and Imagery]({% post_url 2011-08-16-bing-maps-geocoding-and-imagery %})), I decided to try and do the same in PowerShell. This didn't seem to be very hard either, as it's possible to use the same objects as you would in a regular .NET application. Go PowerShell! The only difference is the web service trick on the second line.
 

@@ -1,10 +1,14 @@
 <footer class="site-footer">
   <div class="wrapper">
       {% if site.github_username %}
-      <a href="https://github.com/{{ site.github_username }}">{% icon fa-github fa-2x %}</a>
+      <a href="https://github.com/{{ site.github_username }}">
+          {% include social-icon.html social="github" class="footer-icon" %}
+      </a>
       {% endif %}
       {% if site.twitter_username %}
-      <a href="https://twitter.com/{{ site.twitter_username }}">{% icon fa-twitter fa-2x %}</a>
+      <a href="https://twitter.com/{{ site.twitter_username }}">
+          {% include social-icon.html social="twitter" class="footer-icon" %}
+      </a>
       {% endif %}
   </div>
 </footer>

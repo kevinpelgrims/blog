@@ -2,8 +2,7 @@
 layout: post
 title: "Git is easy. Seriously."
 date: 2013-04-22 18:59:46
-tags: general git
-comments: true
+tags: ["general", "git"]
 ---
 A lot of developers often say things like "Git is easy, once you know it". I'm sick of reading those comments. Git is easy. Period. You can definitely make it as easy as you want. You don't need to know what cherry picking is to use Git, you don't need to rebase everything all the time; all of that is extra. What you need to be able to do is pull, commit and push. Those three commands can get everyone going. Sure, there's a lot more to it, but you can learn that as you go (if you want to). The point is, you don't need to know the rest.
 

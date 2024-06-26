@@ -2,8 +2,7 @@
 layout: post
 title: "Version control best practices - Git edition"
 date: 2012-07-27 06:51:00
-tags: [general, version control, git]
-comments: true
+tags: ["general", "version control", "git"]
 ---
 <img style="float: right; margin: 0 0 5px 10px;" alt="git logo" src="{{ site.baseurl }}/files/images/2012/07/git_logo.png" />
 

@@ -13,24 +13,14 @@ layout: default
   </article>
 
   <section id="share-group">
-    Share this post
+    Share
     <br />
-    <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">{% icon fa-twitter fa-2x %}</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">{% icon fa-facebook-square fa-2x %}</a>
-    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">{% icon fa-google-plus-square fa-2x %}</a>
+    <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      {% include social-icon.html social="twitter" class="share-icon" %}
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      {% include social-icon.html social="facebook" class="share-icon" %}
+    </a>
   </section>
 
-  {% if page.comments %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = 'kevinpelgrims';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {%endif%}
 </div>
