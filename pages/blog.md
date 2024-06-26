@@ -14,12 +14,14 @@ permalink: /blog/
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
             <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <a class="post-link" href="{{ site.baseurl | append: post.url }}">{{ post.title }}</a>
             </h2>
         </li>
         {% endfor %}
     </ul>
 
     <p class="rss-subscribe">Subscribe <a href="http://feeds.feedburner.com/KevinPelgrims">via RSS</a></p>
+
+    {% include all-tags.html %}
 
 </div>

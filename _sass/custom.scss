@@ -27,3 +27,26 @@
 	height: 2em;
 	color: $header-footer-text-color-light;
 }
+
+.tag-link-list {
+	list-style: none;
+	margin: 0;
+}
+
+.tag-link-list-item {
+	display: inline;
+}
+
+.tag-link {
+	background-color: $header-footer-background-color;
+	color: $header-footer-text-color-light;
+	padding: 5px 10px;
+	margin: 5px 2px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 8px;
+
+	&:hover {
+		color: $header-footer-text-color-light;
+	}
+}
