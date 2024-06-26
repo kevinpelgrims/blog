@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div>
+  <h1>Articles tagged with "{{ page.tag-name }}"</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    {% if post.tags contains page.tag-name %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ site.baseurl | append: post.url }}">{{ post.title }}</a>
+      </h2>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% include all-tags.html %}
+</div>
