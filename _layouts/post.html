@@ -15,8 +15,12 @@ layout: default
   <section id="share-group">
     Share
     <br />
-    <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">{% icon fa-twitter fa-2x %}</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">{% icon fa-facebook-square fa-2x %}</a>
+    <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      {% include social-icon.html social="twitter" class="share-icon" %}
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      {% include social-icon.html social="facebook" class="share-icon" %}
+    </a>
   </section>
 
 </div>
