@@ -2,7 +2,7 @@
 layout: post
 title: "Sharepoint tips and tricks"
 date: 2010-01-15 22:27:28
-tags: sharepoint
+tags: ["sharepoint"]
 comments: true
 ---
 Recently I added a webpart to a page in Sharepoint with some bad code in it. As a result I wasn't able to load the page anymore. The only thing I had to do was remove the webpart, so I found this little trick. If you add <strong>?Contents=1</strong> to the end of the URL of the page containing the webpart it displays the Webpart Page Maintenance page. Here you can remove the bad webpart.

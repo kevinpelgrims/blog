@@ -2,7 +2,7 @@
 layout: post
 title: "Android development tips - Style inheritance"
 date: 2012-06-25 07:45:04
-tags: android
+tags: ["android"]
 comments: true
 ---
 <img style="float: right; margin: 5px 0 5px 10px; width: 200px;" alt="android logo" src="{{ site.baseurl }}/files/images/2012/05/android.png" />

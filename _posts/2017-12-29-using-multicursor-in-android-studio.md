@@ -2,7 +2,7 @@
 layout: post
 title: "Using multicursor in Android Studio"
 date: 2017-12-29 16:30:00+01:00
-tags: android tools
+tags: ["android", "tools"]
 comments: true
 ---
 

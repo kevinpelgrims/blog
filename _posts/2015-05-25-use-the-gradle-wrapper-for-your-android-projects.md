@@ -2,7 +2,7 @@
 layout: post
 title: "Use the Gradle Wrapper for your Android projects"
 date: 2015-05-25 19:00:00
-tags: android gradle
+tags: ["android", "gradle"]
 comments: true
 ---
 <img src="{{ site.baseurl }}/files/images/2015/05/gradle_icon.png" style="float: right; width: 250px; margin: 10px;"/>

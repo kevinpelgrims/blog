@@ -2,7 +2,7 @@
 layout: post
 title: "MapGuide – LayerDefinitionFactory in .NET"
 date: 2011-08-09 14:29:22
-tags: gis
+tags: ["gis"]
 comments: true
 ---
 <img style="float:left;margin-left:5px;margin-right:5px;" title="Autodesk Infrastructure Map Server" src="{{ site.baseurl }}/files/images/2011/08/autodeskinfrastructuremapserver.png" alt="Autodesk Infrastructure Map Server logo" width="119" height="150" />

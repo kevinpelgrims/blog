@@ -2,7 +2,7 @@
 layout: post
 title: "Parallel programming in .NET - Task Parallel Library"
 date: 2011-12-17 06:04:00
-tags: parallel .net
+tags: ["parallel", ".net"]
 comments: true
 ---
 I have talked about parallel programming in .NET before, very briefly: [Parallel programming in .NET - Introduction]({% post_url 2010-08-30-parallel-programming-in-net-introduction %}). This follow-up post is long overdue :)

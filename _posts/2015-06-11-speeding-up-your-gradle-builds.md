@@ -2,7 +2,7 @@
 layout: post
 title: "Speeding up Gradle builds"
 date: 2015-06-11 17:00:00
-tags: android gradle
+tags: ["android", "gradle"]
 comments: true
 ---
 A common complaint among Android developers that switch to Gradle is that the build time for their projects increases significantly. Gradle provides a lot of flexibility, but this power comes at the cost of a slower build process. Luckily there are several ways to speed things up.

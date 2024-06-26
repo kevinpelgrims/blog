@@ -2,7 +2,7 @@
 layout: post
 title: "Parallel programming in .NET - Introduction"
 date: 2010-08-30 17:27:18
-tags: parallel
+tags: ["parallel"]
 comments: true
 ---
 ## What is parallel programming?

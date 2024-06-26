@@ -2,7 +2,7 @@
 layout: post
 title: "Android development tips - Eclipse crash on deploy"
 date: 2012-05-23 07:43:00
-tags: android eclipse
+tags: ["android", "eclipse"]
 comments: true
 ---
 <img style="float: right; margin: 0 0 5px 10px" alt="eclipse logo" src="{{ site.baseurl }}/files/images/2012/05/eclipse.png" />

@@ -2,7 +2,7 @@
 layout: post
 title: "MapGuide OS - Failed while processing WebVirtualDirs"
 date: 2011-08-11 14:01:12
-tags: gis
+tags: ["gis"]
 comments: true
 ---
 <img style="float:left;margin-right:5px;" title="Error!" src="{{ site.baseurl }}/files/images/2011/08/error.png" alt="" width="120" />

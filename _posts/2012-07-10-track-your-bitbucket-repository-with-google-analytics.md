@@ -2,7 +2,7 @@
 layout: post
 title: "Track your BitBucket repository with Google Analytics"
 date: 2012-07-11 06:52:00
-tags: [version control, analytics]
+tags: ["version control", "analytics"]
 comments: true
 ---
 Recently I released [my first open source code out in the wild](http://kevinpelgrims.com/blog/2012/05/21/introducing-nugetfight), but I had no idea if people were actually looking at the code at all. We use Google Analytics on [NuGet Fight](http://nugetfight.com), so I figured it would be nice to have the statistics for the repository in there as well. As it turns out this is possible with BitBucket!

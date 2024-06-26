@@ -2,7 +2,7 @@
 layout: post
 title: "Git commits: You're doing it wrong"
 date: 2016-02-23 13:00:00
-tags: general git
+tags: ["general", "git"]
 comments: true
 ---
 
