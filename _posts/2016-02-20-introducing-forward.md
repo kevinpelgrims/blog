@@ -3,7 +3,6 @@ layout: post
 title: "Introducing Forward"
 date: 2016-02-20 13:00:00
 tags: ["forward"]
-comments: true
 ---
 <img src="{{ site.baseurl }}/files/images/2016/02/forward_donations.png" alt="Forward donations" style="float: right; margin: 5px 0 5px 10px; width: 200px;"/>
 

@@ -3,7 +3,6 @@ layout: post
 title: "Parallel programming in .NET - Introduction"
 date: 2010-08-30 17:27:18
 tags: ["parallel"]
-comments: true
 ---
 ## What is parallel programming?
 Sequential programming assumes a set of instructions that are executed sequentially by a single processor. The point of parallel programming is to program systems that consist of multiple processors and therefore have multiple simultaneous instruction streams.

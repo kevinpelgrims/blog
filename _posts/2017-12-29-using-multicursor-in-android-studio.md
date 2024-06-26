@@ -3,7 +3,6 @@ layout: post
 title: "Using multicursor in Android Studio"
 date: 2017-12-29 16:30:00+01:00
 tags: ["android", "tools"]
-comments: true
 ---
 
 One of the most useful methods for editing multiple lines of code or XML in Android Studio (or IntelliJ) is multicursor. This is a feature that makes it possible to edit multiple lines at the same time. There are a few shortcuts you need to remember before you can really take advantage of multicursor, and this is basically a cheat sheet with the most useful multicursor-related shortcuts.

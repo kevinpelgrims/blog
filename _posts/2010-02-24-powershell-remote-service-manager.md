@@ -3,7 +3,6 @@ layout: post
 title: "PowerShell - Remote Service Manager"
 date: 2010-02-24 10:58:13
 tags: ["powershell"]
-comments: true
 ---
 On my last project I had a few problems with a Sharepoint service on a server, we couldn't find the problem straightaway, but restarting the service always seemed to help for a while. Connecting to the server with Remote Desktop and restarting the service, however, is pretty timeconsuming for such a simple task, so I made a little PowerShell script to restart the service remotely.
 

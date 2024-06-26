@@ -3,7 +3,6 @@ layout: post
 title: "PowerShell 2 - What is it and what's new"
 date: 2010-02-17 11:17:16
 tags: ["powershell"]
-comments: true
 ---
 ## What is PowerShell?
 

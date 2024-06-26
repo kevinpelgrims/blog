@@ -3,7 +3,6 @@ layout: post
 title: "Git commits: You're doing it wrong"
 date: 2016-02-23 13:00:00
 tags: ["general", "git"]
-comments: true
 ---
 
 Git is an amazing tool that makes development in a team a lot easier for everyone. But easy comes with a downside: people think less about what they are doing. I quite often come across commits that hurt my eyes. I will address two common issues that annoy me, and I hope to convince you that they are wrong _and_ that there is a better way.

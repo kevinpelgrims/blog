@@ -3,7 +3,6 @@ layout: post
 title: "Bing Maps - Geocoding and Imagery"
 date: 2011-08-17 05:06:00
 tags: ["gis"]
-comments: true
 ---
 Since I did a lot of GIS related stuff recently for work, I decided I'd have some fun with the Bing Maps API. I've been using Bing to display maps as a base for multiple layers of data in combination with MapGuide OS and needed to convert addresses to coordinates. Afterwards I decided to play with it some more and I created a little app in C# that makes more use of Bing Maps.
 

@@ -3,7 +3,6 @@ layout: post
 title: "Cool tool - Neptune (SMTP Testing Server)"
 date: 2011-05-12 23:28:09
 tags: ["general", "tools"]
-comments: true
 ---
 ## Testing e-mails sent from .NET code
 It's always a big hassle to test sending e-mails from websites or applications written in .NET (or any other platform/language). Your inbox gets flooded or even worse, customers' inboxes get flooded. Or you've set up a dummy account to test if e-mails get sent. But sometimes e-mail addresses need to be picked up dynamically depending on certain parameters, from a database, for example. Testing gets annoying here. You can debug and check if the address you want is the right one, you can bother people to check their inbox every time you're testing, ...

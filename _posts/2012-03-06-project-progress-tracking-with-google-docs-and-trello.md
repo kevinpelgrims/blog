@@ -3,7 +3,6 @@ layout: post
 title: "Project progress tracking with Google Docs and Trello"
 date: 2012-03-05 08:24:00
 tags: ["tools", "analytics"]
-comments: true
 ---
 I recently discovered some really powerful features in Google Docs. When you're in a Google Docs spreadsheet, you can do a whole lot of interesting things. For example it's possible to consume XML, including XPath functionality, and easily parse JSON. For more advanced stuff, you can use [Google Apps Script](https://en.wikipedia.org/wiki/Google_Apps_Script) and you can even access other Google applications from there. You could send an email or add an item to your calendar from there. It's possible to trigger those scripts on certain events or with a timer. You can see that there is A LOT of potential here and I actually wonder why we're not all using this some more. I decided to play with it, to see what the possibilities are. For the purpose of this blog post, I made a progress tracker that uses data from a [Trello](https://trello.com/) board.
 

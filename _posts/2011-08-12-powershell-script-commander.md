@@ -3,7 +3,6 @@ layout: post
 title: "PowerShell Script Commander"
 date: 2011-08-13 05:07:00
 tags: ["powershell"]
-comments: true
 ---
 >I wrote this entry last year September, but for several reasons the post and the code never made it to the interwebs.
 >After running into it again I decided to post it anyway and upload the code to [Codeplex](http://pscommander.codeplex.com/).

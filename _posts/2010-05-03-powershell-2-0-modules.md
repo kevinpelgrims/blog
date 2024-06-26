@@ -3,7 +3,6 @@ layout: post
 title: "PowerShell 2.0 - Modules"
 date: 2010-05-03 07:37:20
 tags: ["powershell"]
-comments: true
 ---
 This is part three of four in a series of articles on the new features in PowerShell 2.0.
 Last time we discussed [transactions]({% post_url 2010-04-29-powershell-2-0-transactions %}), now it's time for **modules**!

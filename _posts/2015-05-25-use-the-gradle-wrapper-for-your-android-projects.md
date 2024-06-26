@@ -3,7 +3,6 @@ layout: post
 title: "Use the Gradle Wrapper for your Android projects"
 date: 2015-05-25 19:00:00
 tags: ["android", "gradle"]
-comments: true
 ---
 <img src="{{ site.baseurl }}/files/images/2015/05/gradle_icon.png" style="float: right; width: 250px; margin: 10px;"/>
 I sometimes meet Android developers that are using Android Studio and Gradle for their projects, but have no idea what is happening when I start executing `gradlew` in the command line interface. They usually installed Gradle manually, because they figured it was necessary to get their builds to work now that Google is pushing Gradle. Using the Gradle wrapper, however, has huge advantages.

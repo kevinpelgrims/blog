@@ -3,7 +3,6 @@ layout: post
 title: "Building CoffeeScript with Sublime on Windows"
 date: 2011-12-28 15:15:28
 tags: ["tools", "web"]
-comments: true
 ---
 As I’m looking at [CoffeeScript](http://coffeescript.org/) in my spare time, I wanted a fast way to build the scripts. Since I work with [Sublime Text 2](http://www.sublimetext.com/) for all my scripting, it seemed like the right tool for the job.
 
