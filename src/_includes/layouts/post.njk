@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<div>
+
+  <header>
+    <h1>{{ title }}</h1>
+    <p>{{ date | dateDisplay }}{% if author %} - {{ author }}{% endif %}{% if meta %} - {{ meta }}{% endif %}</p>
+  </header>
+
+  <article>
+    {{ content | safe }}
+  </article>
+
+  <section>
+    <!--TODO: Share-->
+  </section>
+
+</div>
