@@ -1,5 +1,11 @@
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+
 export default async function(eleventyConfig) {
+  // Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   // Passthrough copy for static assets
+  eleventyConfig.addPassthroughCopy("./css");
   eleventyConfig.addPassthroughCopy({"./public/": "/"});
 
   // Collection for posts (sorted by date descending)
