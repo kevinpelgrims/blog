@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-* Ruby 2.5.0 or higher
+* Ruby 3.4.x
 * RubyGems
 
 On MacOS, make sure that XCode Command Line Tools are installed (`xcode-select --install`).
