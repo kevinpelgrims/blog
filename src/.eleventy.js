@@ -38,6 +38,11 @@ export default async function(eleventyConfig) {
             </figure>`;
   });
 
+  // Add lastBuildDate
+  eleventyConfig.addGlobalData("lastBuildDate", () => {
+    return new Date();
+  });
+
   // Content configuration
 	return {
     dir: {

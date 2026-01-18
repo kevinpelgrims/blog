@@ -9,14 +9,17 @@ eleventyExcludeFromCollections: true
     <description>{{ metadata.description }}</description>
     <link>{{ metadata.url }}/blog/</link>
     <atom:link href="{{ metadata.url }}/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ collections.posts[0].date }}</pubDate>
-    <lastBuildDate>{{ collections.posts[0].date }}</lastBuildDate>
+    <pubDate>{{ lastBuildDate | dateToRfc3339 }}</pubDate>
+    <lastBuildDate>{{ lastBuildDate | dateToRfc3339 }}</lastBuildDate>
+    <author>
+      <name>{{ metadata.author.name }}</name>
+    </author>
     <generator>Eleventy</generator>
     {%- for post in collections.posts %}
     <item>
       <title>{{ post.data.title }}</title>
       <description>{{ post.templateContent }}</description>
-      <pubDate>{{ post.date }}</pubDate>
+      <pubDate>{{ post.date | dateToRfc3339 }}</pubDate>
       <link>{{ metadata.url }}{{ post.url }}</link>
       <guid isPermaLink="true">{{ metadata.url }}{{ post.url }}</guid>
       {%- for tag in post.data.tags %}
