@@ -48,6 +48,20 @@ export default async function(eleventyConfig) {
     return new Date(date).toISOString();
   });
 
+  // Excerpt filter (strips HTML and truncates)
+  eleventyConfig.addFilter("excerpt", function(content, length = 200) {
+    if (!content) return "";
+    // Strip HTML tags
+    const text = content.replace(/<[^>]+>/g, "");
+    // Collapse whitespace
+    const clean = text.replace(/\s+/g, " ").trim();
+    // Truncate at word boundary
+    if (clean.length <= length) return clean;
+    const truncated = clean.substring(0, length);
+    const lastSpace = truncated.lastIndexOf(" ");
+    return (lastSpace > 0 ? truncated.substring(0, lastSpace) : truncated) + "…";
+  });
+
   // Shortcodes
   eleventyConfig.addShortcode("figure", (url, description, width) => {
     const widthString = width ? `width="${width}"` : "";

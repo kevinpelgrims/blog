@@ -25,7 +25,7 @@
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --font-mono: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
-  --content-width: 700px;
+  --content-width: 800px;
   --spacing-unit: 1.5rem;
 }
 
@@ -300,6 +300,41 @@ main.container {
 .post-list-title {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+/* Post List with Excerpts (Home page) */
+.post-list--with-excerpts .post-list-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1.25rem 0;
+}
+
+.post-list-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.post-list-excerpt {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.archive-link {
+  margin-top: var(--spacing-unit);
+}
+
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 /* ==========================================================================
@@ -597,6 +632,11 @@ figcaption {
 
   .post-list-title {
     font-size: 1rem;
+  }
+
+  .post-list-header {
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   /* Post/Page Headers */

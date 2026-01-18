@@ -2,13 +2,20 @@
 layout: base.njk
 ---
 
-<ul class="post-list">
-  {% for post in collections.posts %}
+<h2 class="section-title">Latest Blog Posts</h2>
+
+<ul class="post-list post-list--with-excerpts">
+  {%- for post in collections.posts %}
+  {%- if loop.index <= 3 %}
   <li class="post-list-item">
-    <span class="post-list-date">{{ post.date | dateDisplay }}</span>
-    <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+    <div class="post-list-header">
+      <span class="post-list-date">{{ post.date | dateDisplay }}</span>
+      <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+    </div>
+    <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
   </li>
-  {% endfor %}
+  {%- endif %}
+  {%- endfor %}
 </ul>
 
-<p class="rss-link">Subscribe <a href="http://feeds.feedburner.com/KevinPelgrims">via RSS</a></p>
+<p class="archive-link"><a href="/blog/">View all posts &rarr;</a></p>
