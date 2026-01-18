@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<div>
+
+  <h1>Posts</h1>
+
+  <ul>
+    {% for post in collections.posts %}
+    <li>
+      <span>{{ post.date | dateDisplay }}</span>
+
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p >Subscribe <a href="http://feeds.feedburner.com/KevinPelgrims">via RSS</a></p>
+
+</div>
