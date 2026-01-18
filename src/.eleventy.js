@@ -10,7 +10,7 @@ export default async function(eleventyConfig) {
 
   // Collection for posts (sorted by date descending)
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("blog/*.md").sort((a, b) => {
+    return collectionApi.getFilteredByGlob("content/blog/*.md").sort((a, b) => {
       return b.date - a.date;
     });
   });
