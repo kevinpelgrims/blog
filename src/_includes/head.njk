@@ -3,13 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if title %}{{ title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if excerpt %}{{ excerpt | striptags | truncate(160) }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}</title>
+  <meta name="description" content="{% if excerpt %}{{ excerpt | striptags | truncate(160) }}{% else %}{{ metadata.description }}{% endif %}">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/prism-darcula.css">
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace('index.html', '') }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url | replace('index.html', '') }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }}" href="{{ metadata.url }}/feed.xml">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
