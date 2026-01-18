@@ -1,10 +1,12 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { IdAttributePlugin } from "@11ty/eleventy";
+import feedPlugin from "@11ty/eleventy-plugin-rss";
 
 export default async function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(IdAttributePlugin);
+  eleventyConfig.addPlugin(feedPlugin);
 
   // Passthrough copy for static assets
   eleventyConfig.addPassthroughCopy("./css");
