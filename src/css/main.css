@@ -303,6 +303,54 @@ main.container {
 }
 
 /* ==========================================================================
+   Tag Cloud
+   ========================================================================== */
+
+.tag-cloud {
+  margin-top: calc(var(--spacing-unit) * 2);
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--color-border);
+}
+
+.tag-cloud h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-code);
+  border-radius: 4px;
+}
+
+.tag:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.tag-count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.back-link {
+  margin-top: var(--spacing-unit);
+}
+
+/* ==========================================================================
    Page Layout
    ========================================================================== */
 

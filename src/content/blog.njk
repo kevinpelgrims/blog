@@ -24,3 +24,12 @@ permalink: /blog/
   </li>
   {% endfor %}
 </ul>
+
+<section class="tag-cloud">
+  <h2>Tags</h2>
+  <div class="tag-list">
+    {%- for tag in collections.tags %}
+    <a href="/tags/{{ tag.name | slugify }}/" class="tag">{{ tag.name }} <span class="tag-count">{{ tag.count }}</span></a>
+    {%- endfor %}
+  </div>
+</section>

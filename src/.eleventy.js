@@ -20,6 +20,20 @@ export default async function(eleventyConfig) {
     });
   });
 
+  // Collection for all unique tags with post counts
+  eleventyConfig.addCollection("tags", function(collectionApi) {
+    const tagMap = new Map();
+    collectionApi.getFilteredByGlob("content/blog/*.md").forEach((post) => {
+      if (post.data.tags) {
+        post.data.tags.forEach((tag) => {
+          tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
+        });
+      }
+    });
+    return Array.from(tagMap, ([name, count]) => ({ name, count }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  });
+
   // Date filter
   eleventyConfig.addFilter("dateDisplay", function(date) {
     return new Date(date).toLocaleDateString('en-US', {
