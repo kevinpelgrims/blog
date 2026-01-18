@@ -1,10 +1,12 @@
-<header>
-    <a href="/">{{ metadata.title }}</a>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">{{ metadata.title }}</a>
 
-  <nav>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/books/">Books</a>
-    <a href="/talks/">Talks</a>
-  </nav>
+    <nav class="site-nav">
+      <a href="/about/"{% if page.url.startsWith('/about/') %} class="active"{% endif %}>About</a>
+      <a href="/blog/"{% if page.url.startsWith('/blog/') %} class="active"{% endif %}>Blog</a>
+      <a href="/books/"{% if page.url.startsWith('/books/') %} class="active"{% endif %}>Books</a>
+      <a href="/talks/"{% if page.url.startsWith('/talks/') %} class="active"{% endif %}>Talks</a>
+    </nav>
+  </div>
 </header>

@@ -1,14 +1,12 @@
 ---
 layout: base.njk
 ---
-<div>
-
-  <header>
-    <h1>{{ title }}</h1>
+<article class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{ title }}</h1>
   </header>
 
-  <div>
+  <div class="page-content">
     {{ content | safe }}
   </div>
-
-</div>
+</article>

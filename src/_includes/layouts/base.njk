@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {% include "head.njk" %}
-
   <body>
-
     {% include "header.njk" %}
 
-    <div>
+    <main class="container">
       {{ content | safe }}
-    </div>
+    </main>
 
     {% include "footer.njk" %}
 
     {% include "analytics.njk" %}
-
   </body>
-
 </html>
