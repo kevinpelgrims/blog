@@ -22,7 +22,9 @@ When you create a project with Android Studio, the Gradle wrapper is included by
 
 If you are not creating your Android projects using Android Studio, you can get the wrapper by executing a Gradle task. Of course, in that case, you will need to have Gradle installed. You can download Gradle from the [official website](http://gradle.org/downloads "Gradle download page"), or use a package manager like Homebrew if you're on Mac OS X. Once you have Gradle and it is added to your PATH, run following command in your project folder:
 
-	$ gradle wrapper --gradle-version 2.4
+```bash
+$ gradle wrapper --gradle-version 2.4
+```
 
 This task will download the wrapper and set the preferred version to 2.4 (the latest at the time of writing this post). If you do not add the version, it will just download the latest version by default.
 

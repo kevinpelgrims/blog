@@ -10,7 +10,7 @@ Git is an amazing tool that makes development in a team a lot easier for everyon
 
 A common pattern in a lot of repositories on Github is the double commit that is actually the same commit, but the first one had a mistake and the second is a fix:
 
-```
+```bash
 664e6ac  (HEAD, master) Fix one line in verification method  (4 minutes ago)
 3945ef1  Add verification method  (5 minutes ago)
 ```
@@ -25,7 +25,7 @@ All suggestions will rewrite the history of the repository. If you have already 
 
 It is easy to fix these commits. If you discover that you made a mistake in the last commit, you can just make new changes and amend the last commit:
 
-```
+```bash
 git add .
 git commit --amend
 ```
@@ -38,7 +38,7 @@ Amending a commit only works if there is a problem with the last commit. What if
 
 If you want to make changes to the 2 (or more) last commits, you can do a soft reset. This reset will cause the commits to disappear, while keeping all changes made. You can then make a new commit, combining all changes from the last couple of commits:
 
-```
+```bash
 git reset HEAD~2
 git add .
 git commit
@@ -52,7 +52,7 @@ If you want to reset multiple commits and split the changes up into more than on
 
 For more complicated situations, you can always use interactive rebase:
 
-```
+```bash
 git rebase -i
 ```
 
@@ -62,7 +62,7 @@ I will not write an entire rebase manual here, as that has [already](https://git
 
 We have all seen people make huge commits:
 
-```
+```bash
 511 lines added, 364 lines deleted
 ```
 
@@ -72,7 +72,7 @@ This is horrible because it is completely impossible to figure out what this com
 
 So, you ended up making completely unrelated changes without committing. Worry not, we can fix this! Interactive staging to the rescue:
 
-```
+```bash
 git add -i
 ```
 

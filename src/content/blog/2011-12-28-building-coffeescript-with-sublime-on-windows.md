@@ -15,7 +15,7 @@ Now, there are several ways to compile CoffeeScript locally (e.g. [from .NET](ht
 
 Installing the CoffeeScript compiler and Node.js tools is pretty straight forward when we open up a command window and use npm:
 
-```console
+```bash
 npm install coffee-script
 ```
 

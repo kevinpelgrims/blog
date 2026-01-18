@@ -10,7 +10,7 @@ So you have Windows, you're using [msysgit](https://code.google.com/p/msysgit/) 
 ## Create a new SSH key
 First you need to create a new SSH key. This is how you will identify yourself to GitHub.
 
-```console
+```bash
 ssh-keygen -t rsa -C "your_email@youremail.com"
 # Creates a new ssh key using the provided email
 
@@ -29,7 +29,7 @@ You'll also need to add the key to your local ssh database. This part gets annoy
 ## Create a config file
 But the fun is not over yet! You need to set up the two profiles in a config file. Create `/c/Users/you/.ssh/config` and make it look like this:
 
-```
+```bash
 #Account one
 Host one.github.com
     HostName github.com

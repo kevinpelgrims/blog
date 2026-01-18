@@ -6,7 +6,7 @@ tags: ["general"]
 I had a few people asking me how I managed to format the source code for my PowerShell posts, so here's a short explanation. Just type (or paste) your post and when it's time to insert the source code, switch to HTML view.
 
 There you can insert these tags:
-```
+```js
 [sourcecode language="csharp"]
 somecode
 [/sourcecode]
@@ -14,7 +14,7 @@ somecode
 
 And it will come out like this:
 
-```
+```js
 if(formatting)
 {
   return &quot;Yay!&quot;;
