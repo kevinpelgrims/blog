@@ -1,0 +1,13 @@
+{
+  "title": "Kevin Pelgrims",
+  "url": "https://kevinpelgrims.com",
+  "description": "Experiments with Android, Git, Gradle, the web, .NET and PowerShell.",
+  "language": "en",
+  "author": {
+    "name": "Kevin Pelgrims",
+    "email": "kevin.pelgrims@gmail.com",
+    "url": "https://kevinpelgrims.com/about/",
+    "githubHandle": "kevinpelgrims",
+    "linkedinHandle": "kevinpelgrims"
+  }
+}

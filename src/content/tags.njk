@@ -1,0 +1,27 @@
+---
+pagination:
+  data: collections.tags
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag.name | slugify }}/
+layout: base.njk
+eleventyComputed:
+  title: "Posts tagged '{{ tag.name }}'"
+---
+
+<header class="page-header">
+  <h1 class="page-title">{{ tag.name }}</h1>
+</header>
+
+<ul class="post-list">
+  {%- for post in collections.posts %}
+  {%- if post.data.tags and tag.name in post.data.tags %}
+  <li class="post-list-item">
+    <span class="post-list-date">{{ post.date | dateDisplay }}</span>
+    <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+  </li>
+  {%- endif %}
+  {%- endfor %}
+</ul>
+
+<p class="back-link"><a href="/blog/">&larr; Back to all posts</a></p>

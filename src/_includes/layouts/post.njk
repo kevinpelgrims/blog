@@ -1,0 +1,53 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-meta">{{ date | dateDisplay }}{% if author %} - {{ author }}{% endif %}{% if meta %} - {{ meta }}{% endif %}</p>
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+</article>
+
+<div class="post-share">
+  <button class="share-button" data-title="{{ title }}" data-url="{{ metadata.url }}{{ page.url }}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+    <span class="share-text">Share</span>
+  </button>
+</div>
+
+<script>
+  document.querySelector('.share-button').addEventListener('click', async function() {
+    const title = this.dataset.title;
+    const url = this.dataset.url;
+    const textSpan = this.querySelector('.share-text');
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = textSpan.textContent;
+        textSpan.textContent = 'Copied!';
+        setTimeout(() => textSpan.textContent = original, 2000);
+      } catch (err) {
+        console.error('Copy failed:', err);
+      }
+    }
+  });
+</script>
