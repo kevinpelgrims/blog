@@ -385,6 +385,43 @@ main.container {
   margin-top: var(--spacing-unit);
 }
 
+/* Race Icons - using mask-image so background-color controls the color */
+.icon-race {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+  background-color: var(--color-accent);
+  opacity: 0.8;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.icon-run {
+  -webkit-mask-image: url("/icons/run.svg");
+  mask-image: url("/icons/run.svg");
+}
+
+.icon-tri {
+  -webkit-mask-image: url("/icons/tri.svg");
+  mask-image: url("/icons/tri.svg");
+}
+
+.icon-swim {
+  -webkit-mask-image: url("/icons/swim.svg");
+  mask-image: url("/icons/swim.svg");
+}
+
+.icon-bike {
+  -webkit-mask-image: url("/icons/bike.svg");
+  mask-image: url("/icons/bike.svg");
+}
+
 /* ==========================================================================
    Page Layout
    ========================================================================== */
