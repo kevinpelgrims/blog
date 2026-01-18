@@ -602,6 +602,45 @@ figcaption {
 }
 
 /* ==========================================================================
+   Post Share
+   ========================================================================== */
+
+.post-share {
+  margin-top: calc(var(--spacing-unit) * 2);
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--color-border);
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.share-button:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.share-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.share-text {
+  min-width: 3.5rem;
+}
+
+/* ==========================================================================
    About Page Profile
    ========================================================================== */
 
