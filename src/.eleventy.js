@@ -29,6 +29,11 @@ export default async function(eleventyConfig) {
     });
   });
 
+  // ISO date filter (for sitemap)
+  eleventyConfig.addFilter("dateToIso", function(date) {
+    return new Date(date).toISOString();
+  });
+
   // Shortcodes
   eleventyConfig.addShortcode("figure", (url, description, width) => {
     const widthString = width ? `width="${width}"` : "";
