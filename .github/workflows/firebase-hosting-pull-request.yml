@@ -4,16 +4,12 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out
-        uses: actions/checkout@v2
-      - name: Install dependencies (incl. Jekyll)
-        run: |
-          # `bundle install` will fail if the Bundler on the system is different from
-          # the Bundler defined in Gemfile.lock, so we need to force the version
-          sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
-          sudo bundle install
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+            node-version: 25
       - name: Build site
-        run: bundle exec jekyll build
+        run: cd src && npm run build
       - name: Deploy to Firebase (preview)
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

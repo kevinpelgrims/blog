@@ -4,6 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
+    "build": "npm install & npx @11ty/eleventy",
     "start": "npm install & npx @11ty/eleventy --serve"
   },
   "keywords": [],
