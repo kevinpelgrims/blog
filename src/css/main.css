@@ -120,8 +120,8 @@ a:hover {
 }
 
 main.container {
-  padding-top: calc(var(--spacing-unit) * 2);
-  padding-bottom: calc(var(--spacing-unit) * 2);
+  padding-top: calc(var(--spacing-unit) * 1.2);
+  padding-bottom: calc(var(--spacing-unit) * 1.2);
 }
 
 /* ==========================================================================
@@ -230,7 +230,7 @@ main.container {
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: var(--spacing-unit) 0;
-  margin-top: calc(var(--spacing-unit) * 2);
+  margin-top: calc(var(--spacing-unit) * 0.6);
 }
 
 .footer-content {
@@ -313,7 +313,7 @@ main.container {
    ========================================================================== */
 
 .page-header {
-  margin-bottom: calc(var(--spacing-unit) * 2);
+  margin-bottom: calc(var(--spacing-unit) * 1.2);
 }
 
 .page-title {
@@ -325,7 +325,7 @@ main.container {
    ========================================================================== */
 
 .post-header {
-  margin-bottom: calc(var(--spacing-unit) * 2);
+  margin-bottom: calc(var(--spacing-unit) * 1.2);
 }
 
 .post-title {

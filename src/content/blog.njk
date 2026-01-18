@@ -1,7 +1,12 @@
 ---
 layout: base.njk
+title: "Blog"
 permalink: /blog/
 ---
+
+<header class="page-header">
+  <h1 class="page-title">{{ title }}</h1>
+</header>
 
 <ul class="post-list">
   {% for post in collections.posts %}
