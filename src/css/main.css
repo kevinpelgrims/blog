@@ -302,12 +302,6 @@ main.container {
   font-weight: 500;
 }
 
-.rss-link {
-  margin-top: var(--spacing-unit);
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-}
-
 /* ==========================================================================
    Page Layout
    ========================================================================== */
@@ -318,6 +312,28 @@ main.container {
 
 .page-title {
   margin-bottom: 0;
+}
+
+.feed-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+  padding: 0.35rem;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.feed-icon:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.feed-icon svg {
+  width: 0.75em;
+  height: 0.75em;
 }
 
 /* ==========================================================================
