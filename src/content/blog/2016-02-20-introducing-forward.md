@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Introducing Forward"
 date: 2016-02-20 13:00:00
 tags: ["forward"]

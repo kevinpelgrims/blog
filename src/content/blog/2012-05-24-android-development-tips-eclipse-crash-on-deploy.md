@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Android development tips - Eclipse crash on deploy"
 date: 2012-05-23 07:43:00
 tags: ["android", "eclipse"]

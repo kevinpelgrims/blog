@@ -1,20 +1,15 @@
 ---
-layout: post
 title: "Parallel programming in .NET - PLINQ"
 date: 2011-12-23 06:02:00
 tags: ["parallel", ".net"]
 ---
-Now that we've covered the [Task Parallel Library]({% post_url 2011-12-16-parallel-programming-in-net-task-parallel-library %}), it's time to move on.
+Now that we've covered the [Task Parallel Library]({{ "2011-12-16-parallel-programming-in-net-task-parallel-library.md" | inputPathToUrl }}), it's time to move on.
 
 ## What is PLINQ?
 
 PLINQ stands for Parallel LINQ and is simply the parallel version of LINQ to Objects. Just like LINQ you can use it on any IEnumerable and there’s also deferred execution. Using PLINQ is even easier than using the Task Parallel Library!
 
-{% include
-    figure.html url="/files/images/2011/12/parallel_net_plinq.png"
-    description="Regular for loop and LINQ compared to PLINQ (with time in seconds)"
-    width="300"
-%}
+{% figure "/files/images/2011/12/parallel_net_plinq.png", "Regular for loop and LINQ compared to PLINQ (with time in seconds)", "300" %}
 
 ## How do we use PLINQ?
 

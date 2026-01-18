@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Add help to your own PowerShell scripts"
 date: 2010-05-10 08:21:56
 tags: ["powershell"]
 ---
-A while ago I created a script to manage services on a remote server (see [Remote Service Manager]({% post_url 2010-02-24-powershell-remote-service-manager %})). Included in that script was a way to display some information with the use of a switch (`-help`). A few days later I was wondering if there wasn't a better way to include help in own PowerShell scripts. And of course there is! It's even in the help files.
+A while ago I created a script to manage services on a remote server (see [Remote Service Manager]({{ "2010-02-24-powershell-remote-service-manager.md" | inputPathToUrl }})). Included in that script was a way to display some information with the use of a switch (`-help`). A few days later I was wondering if there wasn't a better way to include help in own PowerShell scripts. And of course there is! It's even in the help files.
 
 So, here's what to do. First, check the information in PowerShell help by running following command:
 ```powershell
@@ -62,8 +61,4 @@ Write-Host ‘Hello World!’
 
 There, that's all there is to it. I wish I looked at that before I made the RSM script :) It adds some kind of professionalism to a script, don't you think? And also, it's intuitive for users to use the Get-Help command. Everyone is happy!
 
-{% include
-    figure.html url="/files/images/2010/05/get-help.png"
-    description="Our very own help"
-    width="510"
-%}
+{% figure "/files/images/2010/05/get-help.png", "Our very own help", "510" %}

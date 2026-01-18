@@ -1,11 +1,10 @@
 ---
-layout: post
 title: "PowerShell 2.0 - Modules"
 date: 2010-05-03 07:37:20
 tags: ["powershell"]
 ---
 This is part three of four in a series of articles on the new features in PowerShell 2.0.
-Last time we discussed [transactions]({% post_url 2010-04-29-powershell-2-0-transactions %}), now it's time for **modules**!
+Last time we discussed [transactions]({{ "2010-04-29-powershell-2-0-transactions.md" | inputPathToUrl }}), now it's time for **modules**!
 
 ## Modules
 A module is a package that contains a bunch of PowerShell commands, like cmdlets, functions, variables, ..
@@ -40,11 +39,7 @@ This is our module. Now what do we do with it? To deploy this module we just nee
 
 All we need to do now is import the module by calling `Import-Module` and then we can use the new functions we created! They even become available in the tab command completion (you know what I mean, type "subs" and press the tab button).
 
-{% include
-    figure.html url="/files/images/2010/05/modules.png"
-    description=""
-    width="519"
-%}
+{% figure "/files/images/2010/05/modules.png", "", "519" %}
 
 Now you can use this awesome power to do some fun stuff and make your scripts easily reusable.
 

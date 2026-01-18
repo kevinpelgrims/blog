@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Parallel programming in .NET - Task Parallel Library"
 date: 2011-12-17 06:04:00
 tags: ["parallel", ".net"]
 ---
-I have talked about parallel programming in .NET before, very briefly: [Parallel programming in .NET - Introduction]({% post_url 2010-08-30-parallel-programming-in-net-introduction %}). This follow-up post is long overdue :)
+I have talked about parallel programming in .NET before, very briefly: [Parallel programming in .NET - Introduction]({{ "2010-08-30-parallel-programming-in-net-introduction.md" | inputPathToUrl }}). This follow-up post is long overdue :)
 
 ## What is the TPL?
 
@@ -39,21 +38,13 @@ Console.WriteLine("Parallel Time: " + watch.Elapsed.Seconds.ToString());
 
 The result of running this on my laptop (with multiple cores) looks like this:
 
-{% include
-    figure.html url="/files/images/2011/12/parallel_net_comparison.png"
-    description="Result of comparison sequential - parallel"
-    width="300"
-%}
+{% figure "/files/images/2011/12/parallel_net_comparison.png", "Result of comparison sequential - parallel", "300" %}
 
 As you can see, the parallel for-loop runs A LOT faster than the sequential version. By using all the available processing power, we can speed up loops significantly!
 
 Below is a screenshot of the task manager keeping track of what's happening  while executing the sequential and the parallel. What we can see here is that at first (where the red arrow is pointing at) we only use 1 core heavily. When the parallel code kicks in, all cores peak.
 
-{% include
-    figure.html url="/files/images/2011/12/parallel_net_taskman.png"
-    description="Task manager during comparison sequential - parallel"
-    width="510"
-%}
+{% figure "/files/images/2011/12/parallel_net_taskman.png", "Task manager during comparison sequential - parallel", "510" %}
 
 So, looking at the above code, implementing all this parallelism doesn’t seem to be that hard. The TPL makes it pretty easy to make use of all the processors in a machine.
 

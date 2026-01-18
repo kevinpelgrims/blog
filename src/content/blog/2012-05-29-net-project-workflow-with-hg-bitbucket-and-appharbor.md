@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ".NET project workflow with Hg, BitBucket and AppHarbor"
 date: 2012-05-28 07:48:00
 tags: [".net", "tools", "web"]

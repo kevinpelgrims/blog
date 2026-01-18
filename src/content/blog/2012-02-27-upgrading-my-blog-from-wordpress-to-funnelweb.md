@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Upgrading my blog from WordPress to FunnelWeb"
 date: 2012-02-27 21:02:45
 tags: ["general", ".net", "tools", "web"]

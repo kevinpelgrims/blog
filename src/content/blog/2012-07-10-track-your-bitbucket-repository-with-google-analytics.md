@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Track your BitBucket repository with Google Analytics"
 date: 2012-07-11 06:52:00
 tags: ["version control", "analytics"]

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Adding a badge to an ActionBar tab"
 date: 2014-06-24 20:12:02
 tags: ["android", "ui"]

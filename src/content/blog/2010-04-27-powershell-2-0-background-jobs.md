@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "PowerShell 2.0 - Background Jobs"
 date: 2010-04-27 19:19:07
 tags: ["powershell"]
 ---
-I already told you about a few [cool new features]({% post_url 2010-02-17-powershell-2-what-is-it-and-whats-new %}) in PowerShell 2.0, now it's time to play with them. I've divided one large article into four small ones, to make it a bit more readable. We'll start with **background jobs**, **transactions** and **modules** and end with **remoting**. These will become very useful for the PowerShell master.
+I already told you about a few [cool new features]({{ "2010-02-17-powershell-2-what-is-it-and-whats-new.md" | inputPathToUrl }}) in PowerShell 2.0, now it's time to play with them. I've divided one large article into four small ones, to make it a bit more readable. We'll start with **background jobs**, **transactions** and **modules** and end with **remoting**. These will become very useful for the PowerShell master.
 
 ## Background jobs
 
@@ -14,19 +13,13 @@ Background jobs can be really useful to run complex commands on the background, 
 
 The basic (and most important) commands are `Start-Job`, `Get-Job` and `Stop-Job`. A small demonstration:
 
-{% include
-    figure.html url="/files/images/2010/04/backgroundjobs1.png"
-    width="510"
-%}
+{% figure "/files/images/2010/04/backgroundjobs1.png", "", "510" %}
 
 As you can see, Start-Job starts a background job (surprise, surprise!) and shows us some info of the newly created job.
 
 In the small script above I created a command that would normally pause the execution of it for 30 seconds. Now, because of the use of a background process we can immediately continue our work, while the first piece of script keeps running in the background.
 
-{% include
-figure.html url="/files/images/2010/04/backgroundjobs1.png"
-width="510"
-%}
+{% figure "/files/images/2010/04/backgroundjobs1.png", "", "510" %}
 
 Get-Job gets a list of running or completed jobs in the current session, as you probably expected. Using this command we also get a lot of useful information, like state and command of the job.
 

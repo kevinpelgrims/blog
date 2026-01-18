@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Format source code on WordPress"
 date: 2010-03-04 12:23:27
 tags: ["general"]

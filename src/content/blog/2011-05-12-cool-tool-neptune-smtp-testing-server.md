@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Cool tool - Neptune (SMTP Testing Server)"
 date: 2011-05-12 23:28:09
 tags: ["general", "tools"]

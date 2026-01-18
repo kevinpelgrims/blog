@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Project progress tracking with Google Docs and Trello"
 date: 2012-03-05 08:24:00
 tags: ["tools", "analytics"]

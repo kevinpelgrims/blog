@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Version control best practices"
 date: 2012-07-05 07:51:19
 tags: ["general"]

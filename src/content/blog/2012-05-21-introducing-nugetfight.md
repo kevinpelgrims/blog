@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Introducing NuGetFight"
 date: 2012-05-21 11:01:14
 tags: [".net", "web"]

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "MapGuide OS - Failed while processing WebVirtualDirs"
 date: 2011-08-11 14:01:12
 tags: ["gis"]

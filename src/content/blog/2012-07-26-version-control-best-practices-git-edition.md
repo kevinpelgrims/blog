@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Version control best practices - Git edition"
 date: 2012-07-27 06:51:00
 tags: ["general", "version control", "git"]

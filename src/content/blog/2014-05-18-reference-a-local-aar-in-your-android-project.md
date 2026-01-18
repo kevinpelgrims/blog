@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Reference a local .aar in your Android project"
 date: 2014-05-18 21:05:01
 tags: ["android", "gradle"]

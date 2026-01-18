@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "MapGuide – LayerDefinitionFactory in .NET"
 date: 2011-08-09 14:29:22
 tags: ["gis"]

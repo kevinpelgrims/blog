@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Unit Testing Best Practices and Test Reviews with Roy Osherove"
 date: 2011-10-28 10:58:02
 tags: [".net", "testing"]

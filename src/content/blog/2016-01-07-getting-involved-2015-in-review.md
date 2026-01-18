@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Getting involved - 2015 in review"
 date: 2016-01-07 22:00:00
 tags: ["life", "android", "forward"]

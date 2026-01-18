@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Sharepoint tips and tricks"
 date: 2010-01-15 22:27:28
 tags: ["sharepoint"]

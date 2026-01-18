@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Git is easy. Seriously."
 date: 2013-04-22 18:59:46
 tags: ["general", "git"]

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Building CoffeeScript with Sublime on Windows"
 date: 2011-12-28 15:15:28
 tags: ["tools", "web"]

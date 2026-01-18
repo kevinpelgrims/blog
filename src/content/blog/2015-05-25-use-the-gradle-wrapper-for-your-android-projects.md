@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Use the Gradle Wrapper for your Android projects"
 date: 2015-05-25 19:00:00
 tags: ["android", "gradle"]

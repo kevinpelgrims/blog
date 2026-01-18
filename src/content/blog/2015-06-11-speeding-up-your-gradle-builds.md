@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Speeding up Gradle builds"
 date: 2015-06-11 17:00:00
 tags: ["android", "gradle"]
