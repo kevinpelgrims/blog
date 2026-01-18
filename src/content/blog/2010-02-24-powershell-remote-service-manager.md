@@ -249,7 +249,7 @@ Manage services on a remote computer.
 
 .LINK
 
-http://kevinpelgrims.com
+https://kevinpelgrims.com
 
 #>
 ```

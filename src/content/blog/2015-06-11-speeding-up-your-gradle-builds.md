@@ -21,7 +21,7 @@ The guys at Gradleware (the company that is driving the development of Gradle) a
 
 Since Android Studio 1.3, Gradle version 2.4 is the default. But you might not have upgraded your projects yet. There are two ways to get started with Gradle version 2.4: Manually editing the Gradle wrapper properties file or using an Android Studio dialog.
 
-The properties file for the [Gradle wrapper](http://kevinpelgrims.com/blog/2015/05/25/use-the-gradle-wrapper-for-your-android-projects/ "Using the Gradle Wrapper for Android projects") can be found in your project folder under `gradle/wrapper/` and is called `gradle-wrapper.properties`. The content of that file might look like this:
+The properties file for the [Gradle wrapper]({{ "2015-05-25-use-the-gradle-wrapper-for-your-android-projects.md" | inputPathToUrl }} "Using the Gradle Wrapper for Android projects") can be found in your project folder under `gradle/wrapper/` and is called `gradle-wrapper.properties`. The content of that file might look like this:
 
 ```properties
 #Wed Apr 10 15:27:10 PDT 2013

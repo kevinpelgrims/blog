@@ -5,7 +5,7 @@ tags: ["general", "version control", "git"]
 ---
 <img style="float: right; margin: 0 0 5px 10px;" alt="git logo" src="/img/2012/07/git_logo.png" />
 
-I already made a list of general [version control best practices](http://kevinpelgrims.com/blog/2012/07/05/version-control-best-practices), but since my day to day work is with git, I felt the list was not complete. So I decided to make an extension on the previous post, this time with some git specific best practices. Of course, there is a lot more to it. But this is a good basic list to make sure working (together) with git becomes easier.
+I already made a list of general [version control best practices]({{ "2012-07-05-version-control-best-practices.md" | inputPathToUrl }}), but since my day to day work is with git, I felt the list was not complete. So I decided to make an extension on the previous post, this time with some git specific best practices. Of course, there is a lot more to it. But this is a good basic list to make sure working (together) with git becomes easier.
 
 ## Git best practices
 

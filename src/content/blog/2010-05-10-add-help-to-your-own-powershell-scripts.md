@@ -52,7 +52,7 @@ Its main objective is to show off the cool help thingy anyway.
 Put some notes here.
 
 .LINK
-http://kevinpelgrims.wordpress.com
+https://kevinpelgrims.com
 
 #>
 
