@@ -602,6 +602,25 @@ figcaption {
 }
 
 /* ==========================================================================
+   About Page Profile
+   ========================================================================== */
+
+.about-profile {
+  float: right;
+  margin: 5px 10px 5px 20px;
+  text-align: center;
+}
+
+.about-profile img {
+  margin: 0;
+}
+
+.about-profile .social-links {
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+/* ==========================================================================
    Mobile Styles
    ========================================================================== */
 
