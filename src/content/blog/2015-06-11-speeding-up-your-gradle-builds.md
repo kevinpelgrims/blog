@@ -36,7 +36,7 @@ You can manually change the version number `2.2.1` to `2.4` and the next time yo
 
 Using Android Studio is even easier! Open the `Project Structure` dialog and click on `Project` to see the Gradle settings for your project. Here you can change the version number, again, to `2.4`, and Android Studio will take care of the rest.
 
-![Android Studio Gradle setting]({{ site.baseurl }}/img/2015/06/gradle_androidstudio.png)
+![Android Studio Gradle setting](/img/2015/06/gradle_androidstudio.png)
 
 ## Gradle properties
 
@@ -77,7 +77,7 @@ To extend on the previous tip, you can also exclude certain tasks by using the c
 
 If your builds are extremely slow and you want to figure out the cause for this, you can try profiling your build process. You can add the `--profile` flag to any Gradle task. Adding this flag will create a report under `build/reports/profile`.
 
-![Gradle Profiling]({{ site.baseurl }}/img/2015/06/gradle_profiling.png)
+![Gradle Profiling](/img/2015/06/gradle_profiling.png)
 
 This report shows an overview of where time is spent when running a certain task.
 
@@ -85,4 +85,4 @@ This report shows an overview of where time is spent when running a certain task
 
 I wrote a book! It is titled "Gradle for Android" and will be available in June. (You can already order it on [Packt's website](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing").) I got a lot of inspiration and ideas while I was writing, and there are a few things that I had to leave out of the book, but would still like to get out there. This means that I will be doing some more Gradle posts the coming weeks. So stay tuned for more Gradle goodness!
 
-[![Gradle for Android cover]({{ site.baseurl }}/img/2015/05/gradle_for_android_cover.jpg)](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing")
+[![Gradle for Android cover](/img/2015/05/gradle_for_android_cover.jpg)](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing")

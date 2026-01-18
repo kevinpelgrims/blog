@@ -20,19 +20,19 @@ There are also several ways to select multiple occurrences of the same text.
 
 You can manually create new selections by pressing `Shift+Alt` and double-clicking the left mouse button. If you want to select matching pieces of text, press `Alt+J` (Windows & Linux) / `Ctrl+G` (macOS) to automatically find and select the next occurrence of the currently selected text.
 
-![Select next occurrence demo]({{ site.baseurl }}/img/2017/12/multicursor_ctrl_g.gif)
+![Select next occurrence demo](/img/2017/12/multicursor_ctrl_g.gif)
 
 If you need to select all the occurrences, you can speed it up by using `Shift+Ctrl+Alt+J` (Windows & Linux) / `Ctrl+Cmd+G` (macOS).
 
-![Select all occurrences demo]({{ site.baseurl }}/img/2017/12/multicursor_ctrl_cmd_g.gif)
+![Select all occurrences demo](/img/2017/12/multicursor_ctrl_cmd_g.gif)
 
 ## Editing
 
 When you make multiple selection, you can edit all the pieces of text at the same time, and use `Esc	` to deselect all, except the primary one.
 
-![Edit and escape demo]({{ site.baseurl }}/img/2017/12/multicursor_edit_escape.gif)
+![Edit and escape demo](/img/2017/12/multicursor_edit_escape.gif)
 
-![Deselect demo]({{ site.baseurl }}/img/2017/12/multicursor_deselect.gif)
+![Deselect demo](/img/2017/12/multicursor_deselect.gif)
 
 ## Resources
 

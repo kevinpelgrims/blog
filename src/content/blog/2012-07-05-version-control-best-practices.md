@@ -5,7 +5,7 @@ tags: ["general"]
 ---
 I'm one of the poor guys who had to deal with Visual SourceSafe, I used to work with TFS on a daily basis, I'm using Git every day at work with a few other people, I've been using Hg for some pet projects with a friend and everybody has used Subversion.
 
-<img style="float: right; margin: 5px 0 5px 10px;" alt="version control logos" src="{{ site.baseurl }}/img/2012/07/vc_logos.png" />
+<img style="float: right; margin: 5px 0 5px 10px;" alt="version control logos" src="/img/2012/07/vc_logos.png" />
 
 Version control is everywhere and is much needed when programming. But everybody who has worked with a version control system with a number of people before knows that it is inevitable that at some point someone will commit something that doesn't build, or something that compiles but doesn't run. I have made mistakes like this, so have my colleagues and so have you!
 

@@ -13,7 +13,7 @@ To set up Hg and BitBucket you simply need to follow [the instructions](http://c
 ## AppHarbor for easy deployment
 After a couple of days we were getting sick of always telling each other "hey, I changed something, pull and run to see how cool it is". So we decided to deploy the website on [AppHarbor](https://appharbor.com). The cool thing about this is that you can connect AppHarbor and BitBucket to automatically do everything for you. Setting this up is fairly easy, just follow [this guide](http://support.appharbor.com/kb/3rd-party-integrations/integrating-with-bitbucket) and five minutes later you can benefit!
 
-![NuGetFight on AppHarbor]({{ site.baseurl }}/img/2012/05/ngf_apphb.png)
+![NuGetFight on AppHarbor](/img/2012/05/ngf_apphb.png)
 
 This makes testing the website so much easier. Now I just do some commits locally, when I decide to push to BitBucket it also deploys the website to AppHarbor and my friend can check out the website without having to build it himself.
 
@@ -25,6 +25,6 @@ To be honest, there is a lot of work yet to be done for MongoLab. It seriously a
 ## NuGetFight
 The result of all this work is [NuGetFight](http://nugetfight.com), a website that makes it easier to decide on which [NuGet](http://nuget.org) package to choose.
 
-![NuGetFight]({{ site.baseurl }}/img/2012/05/ngf.png)
+![NuGetFight](/img/2012/05/ngf.png)
 
 Check it out and feel free to contribute, it's [open source](https://bitbucket.org/kevinpelgrims/nugetfight/).

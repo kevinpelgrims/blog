@@ -13,7 +13,7 @@ For the charts we decided to go for JavaScript. Using the canvas element it's pr
 
 First draft of the chart:
 
-![first chart version]({{ site.baseurl }}/img/2012/05/ngf_barchart.png)
+![first chart version](/img/2012/05/ngf_barchart.png)
 
 But after that we improved on it a lot and later also added some animation. We also used the script to learn a bit more about some features of JavaScript we hadn't used before. We're not JavaScript wizards, so it would be cool if somebody with some more knowledge on that part could help us make the charts a bit cooler!
 
@@ -21,7 +21,7 @@ But after that we improved on it a lot and later also added some animation. We a
 It took us a while to find the right formula. In the beginning we used the number of packages, but then when we added the downloads that seemed kind of silly. So Koen came up with the idea to make a spreadsheet and try some formulas in there.
 
 Formula spreadsheet:
-![formula spreadhseet]({{ site.baseurl }}/img/2012/05/ngf_algorithm.png)
+![formula spreadhseet](/img/2012/05/ngf_algorithm.png)
 
 We ended up going for the last one, (packages / download) + downloads. This greatly benefits popular queries. The point of using NuGetFight is finding out which query to use, and finding the most popular one seems like a good reason to use a certain package. Because usually the most popular packages also have good documentation and the biggest community. Of course, this isn't the best way to find out which package to use, but it's the best way to do it programmatically.
 

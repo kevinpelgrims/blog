@@ -3,7 +3,7 @@ title: "MapGuide OS - Failed while processing WebVirtualDirs"
 date: 2011-08-11 14:01:12
 tags: ["gis"]
 ---
-<img style="float:left;margin-right:5px;" title="Error!" src="{{ site.baseurl }}/img/2011/08/error.png" alt="" width="120" />
+<img style="float:left;margin-right:5px;" title="Error!" src="/img/2011/08/error.png" alt="" width="120" />
 When you are installing MapGuide OS and you encounter following error:
 
 `Failed while processing WebVirtualDirs`

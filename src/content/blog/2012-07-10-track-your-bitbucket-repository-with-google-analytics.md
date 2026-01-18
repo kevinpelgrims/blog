@@ -11,11 +11,11 @@ First, in Google Analytics go to account administration and click the "New Accou
 
 Google Analytics now creates your account and a website profile automatically and brings you to a page that displays your Google Analytics key. Copy that key and go to the admin page of your BitBucket repository. The repository details screen actually has a field called "Google Analytics key", paste your key there and save the settings.
 
-![Google Analytics for BitBucket]({{ site.baseurl }}/img/2012/07/GoogleAnalyticsBitBucket_Key.png)
+![Google Analytics for BitBucket](/img/2012/07/GoogleAnalyticsBitBucket_Key.png)
 
 Now go back to the Google Analytics page from before and open the "profiles" tab. As mentioned before Analytics already created a profile for you, but you'll need to change some settings. It's probably a good idea to change the name of the profile, which has the same name as the account by default. More importantly, change the website URL to the full URL to the repository.
 
-![Google Analytics for BitBucket]({{ site.baseurl }}/img/2012/07/GoogleAnalyticsBitBucket.png)
+![Google Analytics for BitBucket](/img/2012/07/GoogleAnalyticsBitBucket.png)
 
 Now when you save this and check the status on the "Tracking Code" tab, it should say "Receiving Data" instead of "Tracking Not Installed". Keep in mind this might take a few minutes.
 

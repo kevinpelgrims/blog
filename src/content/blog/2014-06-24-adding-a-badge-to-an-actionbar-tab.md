@@ -5,7 +5,7 @@ tags: ["android", "ui"]
 ---
 An app I worked on a while ago has a notifications screen where the notifications are divided into tabs. So in order to make it very clear how many notifications are on each tab, we decided to have a "badge" on every tab. Here's an example of what I mean:
 
-![ActionBar tab badge example]({{ site.baseurl }}/img/2014/06/android_actionbar_tab_badge.png)
+![ActionBar tab badge example](/img/2014/06/android_actionbar_tab_badge.png)
 
 It's not possible to just add views to the tab view, so to do this you need to completely override it instead. I've seen a bunch of questions on StackOverflow regarding custom tab views and even adding a badge, but none of them seem to have a good answer. So I decided to write things up here when I was done with my solution.
 

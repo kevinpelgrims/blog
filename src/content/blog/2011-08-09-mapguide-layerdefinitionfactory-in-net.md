@@ -3,7 +3,7 @@ title: "MapGuide – LayerDefinitionFactory in .NET"
 date: 2011-08-09 14:29:22
 tags: ["gis"]
 ---
-<img style="float:left;margin-left:5px;margin-right:5px;" title="Autodesk Infrastructure Map Server" src="{{ site.baseurl }}/img/2011/08/autodeskinfrastructuremapserver.png" alt="Autodesk Infrastructure Map Server logo" width="119" height="150" />
+<img style="float:left;margin-left:5px;margin-right:5px;" title="Autodesk Infrastructure Map Server" src="/img/2011/08/autodeskinfrastructuremapserver.png" alt="Autodesk Infrastructure Map Server logo" width="119" height="150" />
 I encountered a problem today while working on a website that uses Autodesk Infrastructure Map Server 2012 (aka MapGuide) and its API. To programmatically create a new layer on a map it seems to be recommended to use the LayerDefinitionFactory that is provided with the installation of the server. Now the problem is that this factory is only provided in PHP and I am working in C#. I could install PHP on the server and try to get all freaky with .NET-PHP communication. But it seemed easier to just port the factory to C# (it's not that big anyway).
 
 I wrote some basic functions and then only converted the stuff I need for this particular project, but it should be very easy to convert the other functions when you need them. I did not rewrite the `sprintf()` function that can be found in PHP, because it is a lot easier to use `String.Format()` if you adjust the template files. So, this is what one of the templates now look like after changing all the occurrences of `%s` to the C# version with `{0}`, `{1}`, etc.:
