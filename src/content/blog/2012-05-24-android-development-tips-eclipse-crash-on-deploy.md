@@ -3,7 +3,7 @@ title: "Android development tips - Eclipse crash on deploy"
 date: 2012-05-23 07:43:00
 tags: ["android", "eclipse"]
 ---
-<img style="float: right; margin: 0 0 5px 10px" alt="eclipse logo" src="{{ site.baseurl }}/files/images/2012/05/eclipse.png" />
+<img style="float: right; margin: 0 0 5px 10px" alt="eclipse logo" src="{{ site.baseurl }}/img/2012/05/eclipse.png" />
 Last week I added a new external library to an Android project and all of a sudden Eclipse started crashing half of the times I wanted to deploy my app to a phone. The error I got looked like this: "Conversion to Dalvik format failed: Unable to execute dex: Java heap space". But sometimes I would get "Internal error – An out of memory error has occurred" or "GC overhead limit exceeded". I restarted Eclipse, I even rebooted my laptop, nothing seemed to work.
 
 ## Heap space

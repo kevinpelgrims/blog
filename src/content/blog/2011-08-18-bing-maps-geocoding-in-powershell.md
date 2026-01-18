@@ -22,6 +22,6 @@ $wsr.Results[0] | select {$_.Address.FormattedAddress}, {$_.Locations[0].Longitu
 
 When you execute this in PowerShell, it looks like this:
 
-{% figure "/files/images/2011/08/bingapi_powershell.png", "Geocoding in PowerShell", "" %}
+{% figure "/img/2011/08/bingapi_powershell.png", "Geocoding in PowerShell", "" %}
 
 Things like this make you think about the power of PowerShell. If you can do it in .NET, you can do it in PS!

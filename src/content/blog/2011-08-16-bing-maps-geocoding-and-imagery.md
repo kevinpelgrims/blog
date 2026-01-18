@@ -13,7 +13,7 @@ Alright, now you got your key, let's get started!
 
 First thing you need to do to use the Bing Maps service, is **adding a service reference**. We'll start out with some geocoding, so we need the geocode service. The addresses of the available services can be found [here](http://msdn.microsoft.com/en-us/library/cc966738.aspx "Bing Maps Services").
 
-{% figure "/files/images/2011/08/bingapi_servicereference.png", "Click 'Add Service Reference...' to open the service reference dialog", "510" %}
+{% figure "/img/2011/08/bingapi_servicereference.png", "Click 'Add Service Reference...' to open the service reference dialog", "510" %}
 
 # Geocoding
 
@@ -41,7 +41,7 @@ private String Geocode(string address)
 
 GetGeocodeResults is just a function that I made to print out the response on the screen. As seen here:
 
-{% figure "/files/images/2011/08/bingapi_geocode.png", "Get the coordinates for an address", "510" %}
+{% figure "/img/2011/08/bingapi_geocode.png", "Get the coordinates for an address", "510" %}
 
 (There are some extra options available. You could, for example, tell the service to only return "high confidence" results. But I'm not going to talk about that here.)
 
@@ -69,7 +69,7 @@ private String ReverseGeocode(double latitude, double longitude)
 }
 ```
 
-{% figure "/files/images/2011/08/bingapi_reversegeocode.png", "Converting coordinates to addresses is easy!", "510" %}
+{% figure "/img/2011/08/bingapi_reversegeocode.png", "Converting coordinates to addresses is easy!", "510" %}
 
 ## Imagery
 
@@ -110,7 +110,7 @@ private void GetImagery(double latitude, double longitude)
 
 That code gives us this result:
 
-{% figure "/files/images/2011/08/bingapi_imagery.png", "Bing Maps Imagery", "510" %}
+{% figure "/img/2011/08/bingapi_imagery.png", "Bing Maps Imagery", "510" %}
 
 Looks pretty good for a small app that took almost no time to make. The Bing Maps API is pretty straight-forward to work with and MSDN has some good samples to get started. So if you're interested in working with Bing Maps, be sure to check out [the documentation](http://msdn.microsoft.com/en-us/library/dd877180.aspx "Bing Maps on MSDN").
 

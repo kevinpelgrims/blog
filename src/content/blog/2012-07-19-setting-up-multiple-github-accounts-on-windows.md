@@ -3,7 +3,7 @@ title: "Setting up multiple GitHub accounts on Windows"
 date: 2012-07-20 06:51:00
 tags: ["version control", "git"]
 ---
-<img style="float: right; width: 200px" alt="github windows" src="{{ site.baseurl }}/files/images/2012/07/github_windows.png" />
+<img style="float: right; width: 200px" alt="github windows" src="{{ site.baseurl }}/img/2012/07/github_windows.png" />
 
 So you have Windows, you're using [msysgit](https://code.google.com/p/msysgit/) and you already have [GitHub](https://github.com/) [set up](https://help.github.com/articles/set-up-git). But now you have a second GitHub account and you need that to work on your current installation as well. It took me some time to get this right, so I want to share my experience here. This is a bit tricky, but I will try to explain in 3 short steps.
 

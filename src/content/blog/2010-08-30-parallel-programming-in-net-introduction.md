@@ -12,7 +12,7 @@ The clock speeds of chips are no longer increasing. All future improvements in c
 ## Concurrent vs Parallel
 To be clear, parallel programming is not the same as concurrent programming. As they say, a picture says more than a thousand words:
 
-{% figure "/files/images/2010/08/concurrentvsparallel.png", "Comparison between concurrent and parallel", "510" %}
+{% figure "/img/2010/08/concurrentvsparallel.png", "Comparison between concurrent and parallel", "510" %}
 
 Well, maybe it could use some explanation.
 * **Concurrent applications** tend to create a thread that handles a whole series of tasks. Most of the time these concurrent applications create threads because they need an isolated process for a concurrent event.
@@ -21,7 +21,7 @@ Well, maybe it could use some explanation.
 ## Parallel programming in .NET 4.0
 In the .NET 4.0 framework parallel is included in the form of **Task Parallel Library** (TPL) and **Parallel LINQ** (PLINQ). These functions are actually built on top of the existing thread pool in previous versions of the .NET framework. Parallel is pretty easy to implement, but also very easy to misuse or overuse. Caution is required!
 
-{% figure "/files/images/2010/08/paralleloverview-msdn.png", "Overview of parallelism in .NET (from MSDN)", "510" %}
+{% figure "/img/2010/08/paralleloverview-msdn.png", "Overview of parallelism in .NET (from MSDN)", "510" %}
 
 ## Resources
 The following resources provide an introduction to parallel programming in C# 4.0 and provide some guidelines and best practices:

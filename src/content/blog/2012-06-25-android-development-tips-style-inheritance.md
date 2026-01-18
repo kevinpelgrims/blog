@@ -3,7 +3,7 @@ title: "Android development tips - Style inheritance"
 date: 2012-06-25 07:45:04
 tags: ["android"]
 ---
-<img style="float: right; margin: 5px 0 5px 10px; width: 200px;" alt="android logo" src="{{ site.baseurl }}/files/images/2012/05/android.png" />
+<img style="float: right; margin: 5px 0 5px 10px; width: 200px;" alt="android logo" src="{{ site.baseurl }}/img/2012/05/android.png" />
 It's a good habit to use styles in your Android application to do layouts or style fonts that occur in multiple places. It also makes it a lot easier to change the layout of your app later. And styles in Android get even cooler once you figure out how to reuse them!
 
 ## Styles

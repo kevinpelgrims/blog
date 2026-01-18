@@ -15,7 +15,7 @@ PowerShell 2.0 has the solution: transactions. They can help you to solve these 
 
 Starting a transaction is pretty easy with the `Start-Transaction` command, but it doesn't magically fix everything. You still have to use the `-UseTransaction` switch on your regular commands. Commands that use this switch will run inside the scope of the transaction, those who don't will run on the outside. To commit the results of the transaction, use `Complete-Transaction`. If there is something wrong and you need to undo the changes, call `Undo-Transaction`. A little transactions demo in the new Microsoft PowerShell ISE:
 
-{% figure "/files/images/2010/04/transactions.png", "", "510" %}
+{% figure "/img/2010/04/transactions.png", "", "510" %}
 
 This small script creates a transaction scope and creates a string object. Then we append some text to it twice. Once out of the transaction scope, the second time inside of the transaction scope. When we do a `ToString()`, we see that the text that is appended inside of the transaction is not visible at this point. This is kind of normal, because the transaction is not yet completed. Then we complete the transaction and do a `ToString()` again, and we can see the second text too.
 

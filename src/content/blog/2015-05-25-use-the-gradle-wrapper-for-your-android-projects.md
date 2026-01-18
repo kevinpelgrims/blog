@@ -3,7 +3,7 @@ title: "Use the Gradle Wrapper for your Android projects"
 date: 2015-05-25 19:00:00
 tags: ["android", "gradle"]
 ---
-<img src="{{ site.baseurl }}/files/images/2015/05/gradle_icon.png" style="float: right; width: 250px; margin: 10px;"/>
+<img src="{{ site.baseurl }}/img/2015/05/gradle_icon.png" style="float: right; width: 250px; margin: 10px;"/>
 I sometimes meet Android developers that are using Android Studio and Gradle for their projects, but have no idea what is happening when I start executing `gradlew` in the command line interface. They usually installed Gradle manually, because they figured it was necessary to get their builds to work now that Google is pushing Gradle. Using the Gradle wrapper, however, has huge advantages.
 
 ## What is the Gradle wrapper?
@@ -48,4 +48,4 @@ Use `gradlew` instead if `gradle`:
 
 I wrote a book! It is titled "Gradle for Android" and will be available in June. (You can already order it on [Packt's website](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing").) I got a lot of inspiration and ideas while I was writing, and there are a few things that I had to leave out of the book, but would still like to get out there. This means that I will be doing some more Gradle posts the coming weeks. So stay tuned for more Gradle goodness!
 
-[![Gradle for Android cover]({{ site.baseurl }}/files/images/2015/05/gradle_for_android_cover.jpg)](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing")
+[![Gradle for Android cover]({{ site.baseurl }}/img/2015/05/gradle_for_android_cover.jpg)](https://www.packtpub.com/application-development/gradle-android "Gradle for Android - Packt Publishing")

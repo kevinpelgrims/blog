@@ -16,7 +16,7 @@ As I said before, Google Docs can easily parse JSON, which is very convenient wh
 
 The first thing we need to work with the Trello API is a personal key, which is described in the docs. Once you have that you can start messing around with the API to figure out how things work. By looking at the examples and trying a few things straight in the browser it's easy to get a grasp of how everything fits together. When you're done reading the basics and getting a key, it's time to fire up Google Docs and create a new spreadsheet.
 
-![Google Docs script editor]({{ site.baseurl }}/files/images/2012/03/googledocs_script_editor.png)
+![Google Docs script editor]({{ site.baseurl }}/img/2012/03/googledocs_script_editor.png)
 
 To start using scripts in Google Docs, just create a new spreadsheet, Tools > Script editor... and you can get started. To fetch data there's a little function available called UrlFetchApp.fetch(url). To parse the resulting JSON data, you can just use Utilities.jsonParse(data). The URL needed to fetch JSON from a Trello board is "https://api.trello.com/1/url?key=apikey". In this case we need to get all the lists from a board, so "url" here will be "boards/4f49efbbd105c95e0c12332e/lists". This all works nicely together and should give you a list of the lists on the Trello board for the Code52 project. You can debug through the script to check the results of what you're doing without having to write it to the spreadsheet every time.
 
@@ -43,7 +43,7 @@ This way it's easy to get anything needed from Trello, using the one function. I
 
 To make sure the script runs at a certain interval, it's possible to set a timer. In the script editor click Triggers > Current script's triggers... and create a new one. Set it to Time-driven and adjust to the interval at which you want it to run. To get project progress data from a Trello board, 8 hours should be fine. Also, be sure to set up an execution failure notification, so you get informed when the script fails to run.
 
-![Google Docs script trigger]({{ site.baseurl }}/files/images/2012/03/googledocs_script_trigger.png)
+![Google Docs script trigger]({{ site.baseurl }}/img/2012/03/googledocs_script_trigger.png)
 
 ## Counter
 

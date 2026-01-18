@@ -61,4 +61,4 @@ Write-Host ‘Hello World!’
 
 There, that's all there is to it. I wish I looked at that before I made the RSM script :) It adds some kind of professionalism to a script, don't you think? And also, it's intuitive for users to use the Get-Help command. Everyone is happy!
 
-{% figure "/files/images/2010/05/get-help.png", "Our very own help", "510" %}
+{% figure "/img/2010/05/get-help.png", "Our very own help", "510" %}

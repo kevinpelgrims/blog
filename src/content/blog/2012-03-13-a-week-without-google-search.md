@@ -25,7 +25,7 @@ So I started my week by replacing the standard search engine in my browsers by D
 
 Another cool thing is that for queries that have a lot of video results you get a [top result embedded in the page](https://duckduckgo.com/?q=how+to+open+coconut).
 
-![DuckDuckGo with embedded video]({{ site.baseurl }}/files/images/2012/03/duckduckgo_videoembed.png)
+![DuckDuckGo with embedded video]({{ site.baseurl }}/img/2012/03/duckduckgo_videoembed.png)
 
 Also pretty cool is you can read [xkcd straight in DuckDuckGo](https://duckduckgo.com/?q=xkcd). Besides that there's also the calculations and the integration with Wolfram Alpha helps to find facts like [James Hetfield's birthday](https://duckduckgo.com/?q=birth+date+of+james+hetfield).
 

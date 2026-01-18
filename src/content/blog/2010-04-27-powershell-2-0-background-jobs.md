@@ -13,13 +13,13 @@ Background jobs can be really useful to run complex commands on the background, 
 
 The basic (and most important) commands are `Start-Job`, `Get-Job` and `Stop-Job`. A small demonstration:
 
-{% figure "/files/images/2010/04/backgroundjobs1.png", "", "510" %}
+{% figure "/img/2010/04/backgroundjobs1.png", "", "510" %}
 
 As you can see, Start-Job starts a background job (surprise, surprise!) and shows us some info of the newly created job.
 
 In the small script above I created a command that would normally pause the execution of it for 30 seconds. Now, because of the use of a background process we can immediately continue our work, while the first piece of script keeps running in the background.
 
-{% figure "/files/images/2010/04/backgroundjobs1.png", "", "510" %}
+{% figure "/img/2010/04/backgroundjobs1.png", "", "510" %}
 
 Get-Job gets a list of running or completed jobs in the current session, as you probably expected. Using this command we also get a lot of useful information, like state and command of the job.
 

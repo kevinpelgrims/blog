@@ -3,7 +3,7 @@ title: "Introducing Forward"
 date: 2016-02-20 13:00:00
 tags: ["forward"]
 ---
-<img src="{{ site.baseurl }}/files/images/2016/02/forward_donations.png" alt="Forward donations" style="float: right; margin: 5px 0 5px 10px; width: 200px;"/>
+<img src="{{ site.baseurl }}/img/2016/02/forward_donations.png" alt="Forward donations" style="float: right; margin: 5px 0 5px 10px; width: 200px;"/>
 
 The past couple of months, I have been working on a project called [Forward](https://forwardapphq.com/?utm_source=kevinpelgrims.com "Forward"). Forward is an online community where you gather donations for your favorite charity by giving stuff away. If you have something that you want to throw out that is actually still in good shape, you can put it on Forward instead. The person who wants to get the item, pays for it by donating to a charity you specify.
 
@@ -11,7 +11,7 @@ People can get rid of things they no longer need, others can get stuff for an am
 
 We have an Android version of the app on [Google Play](https://play.google.com/store/apps/details?id=com.commanigy.forward&utm_source=kevinpelgrims.com "Forward on Google Play"), and an iOS version on [iTunes](https://itunes.apple.com/app/id955565754 "Forward on iTunes"). You can also use [the website](https://forwardapphq.com/?utm_source=kevinpelgrims.com "Forward website") to view items and post comments. (We hope to expand the functionality on the website soon.)
 
-<img src="{{ site.baseurl }}/files/images/2016/02/forward_donation_new.png" alt="Forward new donation" style="float: left; margin: 5px 10px 5px 0; width: 200px;"/>
+<img src="{{ site.baseurl }}/img/2016/02/forward_donation_new.png" alt="Forward new donation" style="float: left; margin: 5px 10px 5px 0; width: 200px;"/>
 
 Because these items are real-life objects, everything on Forward is geographically restricted. People can only see and request items within a certain radius. Currently we are trying to build a community of users in Copenhagen (Denmark), which takes quite some time and effort. Hopefully we can expand to the rest of the country soon. After that, we will take the entire world! :-)
 

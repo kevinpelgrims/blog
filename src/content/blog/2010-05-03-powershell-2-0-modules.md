@@ -39,7 +39,7 @@ This is our module. Now what do we do with it? To deploy this module we just nee
 
 All we need to do now is import the module by calling `Import-Module` and then we can use the new functions we created! They even become available in the tab command completion (you know what I mean, type "subs" and press the tab button).
 
-{% figure "/files/images/2010/05/modules.png", "", "519" %}
+{% figure "/img/2010/05/modules.png", "", "519" %}
 
 Now you can use this awesome power to do some fun stuff and make your scripts easily reusable.
 
