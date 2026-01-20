@@ -9,8 +9,6 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(feedPlugin);
 
   // Passthrough copy for static assets
-  eleventyConfig.addPassthroughCopy("./css");
-  eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy({"./public/": "/"});
 
   // Collection for posts (sorted by date descending)
