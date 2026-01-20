@@ -4,7 +4,13 @@ title: "Talks"
 permalink: /talks/
 ---
 
-## Overview
+### 2025
+
+* Developer Productivity @ Engineering Leadership Meetup (Copenhagen, Denmark) - May 15
+
+### 2022
+
+* Panel discussion: Digital innovation is ready for healthcare - does healthcare feel the same? @ Digital Tech Summit (Copenhagen, Denmark) - January 27
 
 ### 2017
 
@@ -33,11 +39,31 @@ permalink: /talks/
 
 ## Summaries and slides
 
+### Developer Productivity (2025)
+
+Last-minute talk about developer productivity, how you can analyze, manage, and improve it.
+
+[Slides](https://docs.google.com/presentation/d/17qhmXtcgEEVOEvs-EtzzHtuVuYIrKV0GL2VqXlc0y_8/) (Easier to understand with the presenter notes in Google Slides)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTL9-Qv-dmpR7zo3kOKWUXcxxjHQ8EMF9-YOf6u3yFb_r2iz-eK-YyEv5nvn_NJnHsWOC3C30lofUuw/pubembed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+### Digital innovation is ready for healthcare - does healthcare feel the same? (2022)
+
+Andrei Chiriac & Kevin Pelgrims sat down at the Digital Tech Summit to talk about how technology is applied in healthcare - and what the future might look like.  
+Andrei is Dermatologist & Senior Medical Advisor and Kevin is Engineering Manager at Omhu. Based on their experiences as a doctor in tech and a software engineer in the medical space, they discussed how medical professionals feel about using new technologies, the difficulties of creating software for doctors, the impact of machine learning on healthcare and more.
+We asked them what they hoped the audience was taking with them from the talk:
+
+> We hope that by listening to our conversation, people get a better idea of what it means to bring medical knowledge into the tech industry and new technology into the medical world.
+> The promises of machine learning and the new opportunities that digital solutions bring to healthcare can help solve many problems - as long as we focus on interprofessional collaboration while working towards a common goal.
+> \- Kevin Pelgrims
+
 ### Google Cloud Firestore - Lightning talk (2017)
 
 A short (high level) introduction to Google Cloud Firestore, why it is useful, and how it is different from Firebase Realtime Database. Followed by a discussion.
 
 [Slides](https://github.com/DroidDevsDK/EventMaterial/blob/master/2017-10-11/talks/Google%20Cloud%20Firestore%20-%20Short%20Introduction.pdf)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQYVRgzUuf_nwzJfM1VDrw-ZdPFlFyTQ25reSlNHKILDWdG_1p3Ru7X8POV6_59w7M47xLa9pMr1Ral/pubembed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Data binding on Android (2017)
 
@@ -47,7 +73,7 @@ This talk begins with explaining the basics of data binding, and then quickly mo
 
 [Slides](https://speakerdeck.com/kevinpelgrims/data-binding-on-android)
 
-<script async class="speakerdeck-embed" data-id="64fa632f1d5b424fb4a3632663a354a6" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br />
+<script async class="speakerdeck-embed" data-id="64fa632f1d5b424fb4a3632663a354a6" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 ### Understanding Gradle for Android (2015-2016)
 
@@ -56,13 +82,15 @@ As a Gradle enthusiast, it pains me to see that Android developers do not unders
 [Slides (2016)](https://gotocon.com/dl/goto-cph-2016/slides/KevinPelgrims_UnderstandingGradleForAndroid.pdf)
 [Slides (2015)](https://speakerdeck.com/kevinpelgrims/understanding-gradle-for-android)
 
-<script async class="speakerdeck-embed" data-id="5b87a61e5d1b4dc28e6ea6950e647b80" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br />
+<script async class="speakerdeck-embed" data-id="5b87a61e5d1b4dc28e6ea6950e647b80" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 ### Architecting Android apps (2015)
 
 A short talk about a way to architect apps with the help of some libraries. The demo app is an app that actually will be published to Google Play in a few weeks, so all code is real world code. Testability will also be discussed. The idea is that you walk away from the talk with some inspiration for putting apps together.
 
-[Slides](https://docs.google.com/presentation/d/1M07O7JIkp1cguZsQXXFvaPIY1UrMOCascL3ZcuoI0VI/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1M07O7JIkp1cguZsQXXFvaPIY1UrMOCascL3ZcuoI0VI/)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR3Dx3nrkxdN8IasPFjVXzbth611OcZgPF8fIHcw9J29e4fk8q-z1enIatvFGkmBlUE0RkuBeNv3BGR/pubembed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Retrofit for beginners (2014)
 
@@ -81,7 +109,9 @@ No slides
 
 Most Android phones are lightweights compared to the good old desktops and laptops we used to develop for. On top of that they also have a limited battery life. Keeping the memory footprint of an app low is one the more important tasks of a mobile developer. In this talk we'll look at some simple optimization tricks, then get into some more advanced analysis and solutions based on the resulting knowledge.
 
-[Slides](https://docs.google.com/presentation/d/1sCjdxGjBhagfWkhs8LrD-P6V0uuoFQJKgC5GeFzWuJY/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1sCjdxGjBhagfWkhs8LrD-P6V0uuoFQJKgC5GeFzWuJY/)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT9UqImHeN6k8Ha8b_N81DBuHWLqTKxlMDw-1szLIS7UIh22fAbXpK-g_3nFt8Pqaux8GjW10tLhWMm/pubembed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Introduction to Gradle and Android Studio (2014)
 
@@ -90,4 +120,6 @@ Are you sick of Eclipse and Ant, but you don't want to write your code in Notepa
 In this short introduction we'll see how to use Android Studio to create a new project that builds with Gradle, how to convert an existing project to Gradle, how to maintain different build types and how to add actions to your build.
 We'll also see how Android Studio can improve your daily workflow and make you a little more productive.
 
-[Slides](https://dl.dropboxusercontent.com/u/1288556/DroidDevs/Gradle%20%26%20Android%20Studio.pdf)
+[Slides](https://docs.google.com/presentation/d/1IWAKkFcrZJGWWMpUyspNnOhJ33gexmYtEXB8mE6tUyk/)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRc5Buc0JuVePXwJfDFNzbQq80mjoYWLwlRP-byGFbGiOfZPIlKWiHfSAUr-oCxQRRUMPrOLbYX1q7G/pubembed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
