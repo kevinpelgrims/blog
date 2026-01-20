@@ -1,6 +1,5 @@
 export default {
 	layout: "post.njk",
-	tags: "posts",
 	eleventyComputed: {
 		permalink: (data) => {
 			const date = new Date(data.date);
