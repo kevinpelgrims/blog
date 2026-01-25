@@ -12,6 +12,8 @@ Building Forward was a fun and challenging experience.
 From a mobile development perspective it was not that tough, but it required massive marketing efforts to build a network big enough to sustain a marketplace.
 We made marketing material for the web, flyers on paper, joined forces with the Danish Red Cross and Mødrehjælpen, collaborated with Denmark's biggest football club FC København, etc.
 
+<img src="/img/projects/forward.png" alt="Forward Website" style="max-width: 500px;">
+
 ## From the website
 
 <div class="feature-columns">
