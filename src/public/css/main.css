@@ -455,6 +455,32 @@ main.container {
   height: 1rem;
 }
 
+/* Feature Columns */
+.feature-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: var(--spacing-unit) 0;
+}
+
+.feature-column h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.feature-column p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .feature-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 /* ==========================================================================
    Tag Cloud
    ========================================================================== */
