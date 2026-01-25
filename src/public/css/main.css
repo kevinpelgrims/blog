@@ -455,6 +455,15 @@ main.container {
   height: 1rem;
 }
 
+/* Responsive iframes/videos */
+.project-content iframe,
+.post-content iframe,
+.page-content iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 /* Feature Columns */
 .feature-columns {
   display: grid;
