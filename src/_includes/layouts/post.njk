@@ -12,6 +12,36 @@ layout: base.njk
   </div>
 </article>
 
+{% set posts = collections.posts %}
+{% set currentIndex = -1 %}
+{% for post in posts %}
+  {% if post.url == page.url %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% if currentIndex >= 0 %}
+  {% set newerPost = posts[currentIndex - 1] if currentIndex > 0 else null %}
+  {% set olderPost = posts[currentIndex + 1] if currentIndex < posts.length - 1 else null %}
+
+  {% if newerPost or olderPost %}
+  <nav class="post-nav">
+    <div class="post-nav-item post-nav-prev">
+      {% if olderPost %}
+        <span class="post-nav-label">Previous</span>
+        <a href="{{ olderPost.url }}">{{ olderPost.data.title }}</a>
+      {% endif %}
+    </div>
+    <div class="post-nav-item post-nav-next">
+      {% if newerPost %}
+        <span class="post-nav-label">Next</span>
+        <a href="{{ newerPost.url }}">{{ newerPost.data.title }}</a>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
+{% endif %}
+
 <div class="post-share">
   <button class="share-button" data-title="{{ title }}" data-url="{{ metadata.url }}{{ page.url }}">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
