@@ -32,6 +32,11 @@ export default async function(eleventyConfig) {
       .sort((a, b) => a.name.localeCompare(b.name));
   });
 
+  // Collection for projects
+  eleventyConfig.addCollection("projects", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("content/projects/*.md");
+  });
+
   // Date filter
   eleventyConfig.addFilter("dateDisplay", function(date) {
     return new Date(date).toLocaleDateString('en-US', {

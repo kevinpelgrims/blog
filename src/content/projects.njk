@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: "Projects"
+permalink: /projects/
+---
+
+<header class="page-header">
+  <h1 class="page-title">
+    {{ title }}
+  </h1>
+</header>
+
+<ul class="project-list">
+  {% for project in collections.projects %}
+  <li class="project-card">
+    <img src="/img/projects/{{ project.data.image }}" alt="{{ project.data.title }}" class="project-image">
+    <div class="project-content">
+      <div class="project-tags">
+        {% for tag in project.data.tags %}
+        <span class="project-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <a href="{{ project.url }}" class="project-name">{{ project.data.title }}</a>
+      <p class="project-excerpt">{{ project.data.description }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
