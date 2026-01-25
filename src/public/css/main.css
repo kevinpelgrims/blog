@@ -335,6 +335,13 @@ main.container {
   color: var(--color-text-muted);
   margin-top: 0;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Home Page Sections */
+main.container > section + section {
+  margin-top: calc(var(--spacing-unit) * 2);
 }
 
 /* ==========================================================================

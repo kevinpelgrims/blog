@@ -2,20 +2,45 @@
 layout: base.njk
 ---
 
-<h2 class="section-title">Latest Blog Posts</h2>
+<section>
 
-<ul class="post-list post-list--with-excerpts">
-  {%- for post in collections.posts %}
-  {%- if loop.index <= 3 %}
-  <li class="post-list-item">
-    <div class="post-list-header">
-      <span class="post-list-date">{{ post.date | dateDisplay }}</span>
-      <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
-    </div>
-    <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
-  </li>
-  {%- endif %}
-  {%- endfor %}
-</ul>
+  <h2 class="section-title">Latest Blog Posts</h2>
 
-<p class="archive-link"><a href="/blog/">View all posts &rarr;</a></p>
+  <ul class="post-list post-list--with-excerpts">
+    {%- for post in collections.posts %}
+    {%- if loop.index <= 3 %}
+    <li class="post-list-item">
+      <div class="post-list-header">
+        <span class="post-list-date">{{ post.date | dateDisplay }}</span>
+        <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+      </div>
+      <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
+    </li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+
+  <p class="archive-link"><a href="/blog/">View all posts &rarr;</a></p>
+
+</section>
+
+<section>
+
+  <h2 class="section-title">Projects</h2>
+
+  <ul class="post-list post-list--with-excerpts">
+    {%- for project in collections.projects %}
+    {%- if loop.index <= 3 %}
+    <li class="post-list-item">
+      <div class="post-list-header">
+        <a href="{{ project.url }}" class="post-list-title">{{ project.data.title }}</a>
+      </div>
+      <p class="post-list-excerpt">{{ project.data.description }}</p>
+    </li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+
+  <p class="archive-link"><a href="/projects/">View all projects &rarr;</a></p>
+
+</section>
