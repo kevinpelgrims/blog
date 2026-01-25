@@ -412,6 +412,50 @@ main.container {
 }
 
 /* ==========================================================================
+   Project Page
+   ========================================================================== */
+
+.project-header {
+  position: relative;
+  margin-bottom: calc(var(--spacing-unit) * 1.2);
+}
+
+.project-header .project-tags {
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-right: 5rem;
+}
+
+.project-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+}
+
+.project-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.project-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ==========================================================================
    Tag Cloud
    ========================================================================== */
 
@@ -812,6 +856,16 @@ figcaption {
   .page-header,
   .post-header {
     margin-bottom: 1.5rem;
+  }
+
+  /* Project Page */
+  .project-title {
+    padding-right: 0;
+  }
+
+  .project-link {
+    position: static;
+    margin-top: 0.5rem;
   }
 
   /* Content */
