@@ -1,10 +1,6 @@
 # JS
 node_modules/
 
-# Jekyll
-_site
-.sass-cache
-
 # Development
 .idea/
 vendor/
